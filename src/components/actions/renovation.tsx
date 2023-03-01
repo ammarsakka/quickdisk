@@ -2,6 +2,7 @@ import React, { MouseEvent } from 'react'
 import { Button, Menu, MenuItem } from '@mui/material'
 import EditIcon from '@mui/icons-material/Edit';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import EngineeringIcon from '@mui/icons-material/Engineering';
 
 interface type {
     id: any,
@@ -60,6 +61,10 @@ export const RenovationActions = ({ id, handleAction }: type) => {
                 <MenuItem className='flex gap-2 items-center' onClick={() => { handleSubmit('comment') }} disableRipple>
                     <EditIcon />
                     Add Comment
+                </MenuItem>
+                <MenuItem className='flex gap-2 items-center' onClick={() => { handleSubmit('management') }} disableRipple>
+                    <EngineeringIcon />
+                    Building Management
                 </MenuItem>
             </Menu>
         </div>

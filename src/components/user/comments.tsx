@@ -46,11 +46,11 @@ export const Comments = ({ isModule, setModule, reload, data, id }: type) => {
     }, [data, token, id])
 
     useEffect(() => {
+        setComments([])
         handleComments()
-    }, [handleComments, isModule])
+    }, [isModule])
 
     useEffect(() => {
-        setComments([])
         if (commet[0]?.comments_comment) {
             const data = JSON.parse(commet[0]?.comments_comment)
             data.map((item: any) => {
@@ -59,7 +59,7 @@ export const Comments = ({ isModule, setModule, reload, data, id }: type) => {
                 return ''
             })
         }
-    }, [indexId, commet])
+    }, [commet])
 
     const handleSubmit = () => {
         setLoading(true)

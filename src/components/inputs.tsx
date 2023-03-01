@@ -14,7 +14,7 @@ import { customer } from './interfaces/customer';
 
 interface input {
     label: string,
-    value: string | number,
+    value: string | number | undefined,
     change: any,
     type?: string,
     disabled?: boolean,
@@ -26,7 +26,7 @@ interface input {
 
 interface phone {
     label: string,
-    value: string,
+    value: string | undefined,
     change: any,
     disabled?: boolean,
     required?: boolean

@@ -16,13 +16,20 @@ const styles = StyleSheet.create({
     textHead: {
         fontSize: 12,
         fontWeight: 'semibold',
-        lineHeight: 1.2
     },
     text: {
-        fontSize: 10,
+        fontSize: 11,
         display: 'flex',
         flexDirection: 'row',
-        lineHeight: 1.3
+        fontWeight: 'light',
+    },
+    textWidth: {
+        fontSize: 11,
+        display: 'flex',
+        flexDirection: 'row',
+        fontWeight: 'light',
+        width: '100%',
+        maxWidth: 180
     },
     table: {
         border: 2,
@@ -55,8 +62,9 @@ const styles = StyleSheet.create({
     textFlex: {
         display: 'flex',
         flexDirection: 'row',
-        alignItems: 'baseline',
+        alignItems: 'flex-start',
         gap: 4,
+        width: '100%'
     }
 });
 
@@ -98,40 +106,40 @@ const GenerateRenovationPdf = ({ renovation }: { renovation: Renovation[] }) => 
                     </View>
 
                     <View style={{ flexDirection: 'row', padding: 10 }}>
-                        <View style={{ width: '50%', gap: 2 }}>
+                        <View style={{ width: '50%', gap: 10 }}>
                             <View style={styles.textFlex}>
                                 <Text style={styles.textHead}>Name:</Text>
-                                <Text style={styles.text}>{renovation[0]?.name}</Text>
+                                <Text style={styles.textWidth}>{renovation[0]?.name}</Text>
                             </View>
                             <View style={styles.textFlex}>
                                 <Text style={styles.textHead}>Position:</Text>
-                                <Text style={styles.text}>{renovation[0]?.position}</Text>
+                                <Text style={styles.textWidth}>{renovation[0]?.position}</Text>
                             </View>
                             <View style={styles.textFlex}>
                                 <Text style={styles.textHead}>Email:</Text>
-                                <Text style={styles.text}>{renovation[0]?.email}</Text>
+                                <Text style={styles.textWidth}>{renovation[0]?.email}</Text>
                             </View>
                             <View style={styles.textFlex}>
                                 <Text style={styles.textHead}>Address:</Text>
-                                <Text style={styles.text}>{renovation[0]?.address}</Text>
+                                <Text style={styles.textWidth}>{renovation[0]?.address}</Text>
                             </View>
                         </View>
-                        <View style={{ width: '50%', gap: 2 }}>
+                        <View style={{ width: '50%', gap: 10 }}>
                             <View style={styles.textFlex}>
                                 <Text style={styles.textHead}>Phone:</Text>
-                                <Text style={styles.text}>{renovation[0]?.phone}</Text>
+                                <Text style={styles.textWidth}>{renovation[0]?.phone}</Text>
                             </View>
                             <View style={styles.textFlex}>
                                 <Text style={styles.textHead}>Company Name:</Text>
-                                <Text style={styles.text}>{renovation[0]?.company}</Text>
+                                <Text style={styles.textWidth}>{renovation[0]?.company}</Text>
                             </View>
                             <View style={styles.textFlex}>
                                 <Text style={styles.textHead}>Nature of Business:</Text>
-                                <Text style={styles.text}>{renovation[0]?.business}</Text>
+                                <Text style={styles.textWidth}>{renovation[0]?.business}</Text>
                             </View>
                             <View style={styles.textFlex}>
                                 <Text style={styles.textHead}>Size (SQFT):</Text>
-                                <Text style={styles.text}>{renovation[0]?.size}</Text>
+                                <Text style={styles.textWidth}>{renovation[0]?.size}</Text>
                             </View>
                         </View>
                     </View>
@@ -139,18 +147,20 @@ const GenerateRenovationPdf = ({ renovation }: { renovation: Renovation[] }) => 
                         <Text style={styles.textHead}>Property Details</Text>
                     </View>
                     <View style={{ flexDirection: 'row', padding: 10 }}>
-                        <View style={{ width: '100%', gap: 2 }}>
+                        <View style={{ width: '50%', gap: 10 }}>
                             <View style={styles.textFlex}>
                                 <Text style={styles.textHead}>Types of Designated Area:</Text>
                                 <Text style={styles.text}>{renovation[0]?.property_designated}</Text>
                             </View>
                             <View style={styles.textFlex}>
-                                <Text style={styles.textHead}>Types of Property:</Text>
-                                <Text style={styles.text}>{renovation[0]?.property_type}</Text>
-                            </View>
-                            <View style={styles.textFlex}>
                                 <Text style={styles.textHead}>Property Status:</Text>
                                 <Text style={styles.text}>{renovation[0]?.property_status}</Text>
+                            </View>
+                        </View>
+                        <View style={{ width: '50%', gap: 10 }}>
+                            <View style={styles.textFlex}>
+                                <Text style={styles.textHead}>Types of Property:</Text>
+                                <Text style={styles.text}>{renovation[0]?.property_type}</Text>
                             </View>
                             <View style={styles.textFlex}>
                                 <Text style={styles.textHead}>Layout:</Text>
@@ -162,13 +172,13 @@ const GenerateRenovationPdf = ({ renovation }: { renovation: Renovation[] }) => 
                         <Text style={styles.textHead}>Finance</Text>
                     </View>
                     <View style={{ flexDirection: 'row', padding: 10 }}>
-                        <View style={{ width: '50%', gap: 2 }}>
+                        <View style={{ width: '50%', gap: 10 }}>
                             <View style={styles.textFlex}>
                                 <Text style={styles.textHead}>Payment Terms:</Text>
                                 <Text style={styles.text}>{renovation[0]?.finance_terms}</Text>
                             </View>
                         </View>
-                        <View style={{ width: '50%', gap: 2 }}>
+                        <View style={{ width: '50%', gap: 10 }}>
                             <View style={styles.textFlex}>
                                 <Text style={styles.textHead}>Estimated Budget:</Text>
                                 <Text style={styles.text}>{formatter.format(renovation[0]?.finance_budget)}</Text>
@@ -179,7 +189,7 @@ const GenerateRenovationPdf = ({ renovation }: { renovation: Renovation[] }) => 
                         <Text style={styles.textHead}>Building Management</Text>
                     </View>
                     <View style={{ flexDirection: 'row', padding: 10 }}>
-                        <View style={{ width: '50%', gap: 2 }}>
+                        <View style={{ width: '50%', gap: 10 }}>
                             <View style={styles.textFlex}>
                                 <Text style={styles.textHead}>Contact No:</Text>
                                 <Text style={styles.text}>{renovation[0]?.management_contact}</Text>
@@ -189,7 +199,7 @@ const GenerateRenovationPdf = ({ renovation }: { renovation: Renovation[] }) => 
                                 <Text style={styles.text}>{renovation[0]?.management_working && moment(renovation[0]?.management_working, "HH:mm:ss").format("HH:mm A")}</Text>
                             </View>
                         </View>
-                        <View style={{ width: '50%', gap: 2 }}>
+                        <View style={{ width: '50%', gap: 10 }}>
                             <View style={styles.textFlex}>
                                 <Text style={styles.textHead}>Insurance:</Text>
                                 <Text style={styles.text}>{renovation[0]?.management_insurance}</Text>
@@ -204,16 +214,16 @@ const GenerateRenovationPdf = ({ renovation }: { renovation: Renovation[] }) => 
                         <Text style={styles.textHead}>MOR Attendee</Text>
                     </View>
                     <View style={{ flexDirection: 'row', padding: 10 }}>
-                        <View style={{ width: '50%', gap: 2 }}>
+                        <View style={{ width: '50%', gap: 10 }}>
                             <View style={styles.textFlex}>
                                 <Text style={styles.textHead}>Name:</Text>
-                                <Text style={styles.text}>{renovation[0]?.first_name} {renovation[0]?.last_name}</Text>
+                                <Text style={{...styles.text, textTransform: 'capitalize'}}>{renovation[0]?.first_name} {renovation[0]?.last_name}</Text>
                             </View>
                         </View>
-                        <View style={{ width: '50%', gap: 2 }}>
+                        <View style={{ width: '50%', gap: 10 }}>
                             <View style={styles.textFlex}>
                                 <Text style={styles.textHead}>Comment:</Text>
-                                <View>
+                                <View style={{gap: 5}}>
                                     {
                                         renovation[0]?.comments_comment &&
                                         JSON.parse(renovation[0]?.comments_comment).map((comment: any, index: number) => (

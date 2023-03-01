@@ -13,6 +13,7 @@ import { RenovationActions } from '../actions/renovation'
 import { Comments } from '../user/comments'
 import { HashLoader } from 'react-spinners'
 import { API_URL } from '../api/url'
+import { RenovationManagement } from '../user/renovationManagement'
 
 type Props = {
     slug: string
@@ -29,6 +30,7 @@ export default function MyOfficeRenovation({ slug }: Props) {
     const [id, setId] = useState<number>(0)
 
     const [edit, setEdit] = useState(false)
+    const [management, setManagement] = useState(false)
 
     const handleAction = (id: any, action: string) => {
         setId(id)
@@ -36,6 +38,9 @@ export default function MyOfficeRenovation({ slug }: Props) {
         switch (action) {
             case 'comment':
                 setEdit(true)
+                break
+            case 'management':
+                setManagement(true)
                 break
 
             default:
@@ -88,6 +93,7 @@ export default function MyOfficeRenovation({ slug }: Props) {
                     components={{ Toolbar: customToolbar }}
                 />
                 <Comments isModule={edit} setModule={setEdit} reload={reload} id={id} data={company} />
+                <RenovationManagement isModule={management} setModule={setManagement} reload={reload} id={id} data={company} />
             </Controller>
         )
 }
