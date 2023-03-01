@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './Home'
+import Login from './Login'
+import Dashboard from './controller/home'
+import Users from './controller/users'
+import Companies from './controller/companies'
+import CompanyDashboard from './company/home'
+import CompanyCustomers from './company/customers'
+import CompanyInquiries from './company/inquiries'
+import CompanyReports from './company/reports'
+import CompanyForm from './company/form'
+import CompanyCustomer from './company/customer'
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/controller/home' element={<Dashboard />} />
+        <Route path='/controller/users' element={<Users />} />
+        <Route path='/controller/companies' element={<Companies />} />
+        <Route path='/company/:company/home' element={<CompanyDashboard />} />
+        <Route path='/company/:company/customers' element={<CompanyCustomers />} />
+        <Route path='/company/:company/inquiries' element={<CompanyInquiries />} />
+        <Route path='/company/:company/reports' element={<CompanyReports />} />
+        <Route path='/company/:company/form/:inquiry' element={<CompanyForm />} />
+        <Route path='/company/:company/customer/:user' element={<CompanyCustomer />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;
