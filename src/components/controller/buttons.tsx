@@ -40,10 +40,10 @@ interface menuList {
 }
 
 const ListItem = [
-    {
-        name: 'home',
-        icon: <DashboardIcon />
-    },
+    // {
+    //     name: 'home',
+    //     icon: <DashboardIcon />
+    // },
     {
         name: 'customers',
         icon: <GroupsIcon />
@@ -52,10 +52,10 @@ const ListItem = [
         name: 'inquiries',
         icon: <AssignmentIcon />
     },
-    {
-        name: 'reports',
-        icon: <FlagIcon />
-    }
+    // {
+    //     name: 'reports',
+    //     icon: <FlagIcon />
+    // }
 ]
 
 export const ListButton = ({ title, icon, url, selected, parent = false }: menuList) => {
