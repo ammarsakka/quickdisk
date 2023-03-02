@@ -53,9 +53,9 @@ export const Comments = ({ isModule, setModule, reload, data, id }: type) => {
     useEffect(() => {
         if (commet[0]?.comments_comment) {
             const data = JSON.parse(commet[0]?.comments_comment)
-            data.map((item: any) => {
-                setComments(oldItems => [...oldItems, { id: indexId, date: item.date, comment: item.comment }])
-                setIndexId(indexId + 1)
+            data.map((item: any, index: number) => {
+                setIndexId(index + 1)
+                setComments(oldItems => [...oldItems, { id: index, date: item.date, comment: item.comment }])
                 return ''
             })
         }

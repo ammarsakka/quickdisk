@@ -20,7 +20,7 @@ export const Menu = ({ page }: page) => {
             }
             {
                 hasAccess?.map((user) => {
-                    if (user.role === 'admin' || user.role === 'maneger')
+                    if (user.role === 'admin' || user.role === 'manager')
                         return (
                             AdminMenu.map((menu, index) => (
                                 <HomeButtons title={menu.title} icon={menu.icon} url={menu.url} key={index} selected={page === menu.title} />

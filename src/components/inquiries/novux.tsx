@@ -73,6 +73,8 @@ export default function Novux({ slug }: { slug: string }) {
                     columns={[
                         { field: 'inquiry_id', headerName: 'No', flex: 1, renderCell: (e) => <Link target={'_blank'} to={`/company/${company}/form/${e.row.inquiry_id}`}><Links className='cursor-pointer'>{e.formattedValue}</Links></Link> },
                         { field: 'name', headerName: 'Name', flex: 1, renderCell: (e) => <Link to={`/company/${company}/customer/${e.row.customer_id}`}><Links className='cursor-pointer'>{e.formattedValue}</Links></Link> },
+                        { field: 'email', headerName: 'Email', flex: 1 },
+                        { field: 'phone', headerName: 'Phone', flex: 1 },
                         { field: 'username', headerName: 'Person in Charge', flex: 1 },
                         { field: 'agency', headerName: 'Agency', flex: 1 },
                         { field: 'date', headerName: 'Date', flex: 1, renderCell: (e) => moment(e.formattedValue).format('MMM DD, Y') },

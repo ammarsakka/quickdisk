@@ -9,6 +9,11 @@ export const useToken = () => {
         setToken(token)
     }
 
+    const deleteToken = () => {
+        window.localStorage.removeItem(storageName)
+        setToken('')
+    }
+
     const getToken = () => {
         return window.localStorage.getItem(storageName)
     }
@@ -16,6 +21,7 @@ export const useToken = () => {
     return {
         token: getToken(),
         setToken: setUserToken,
-        current: token
+        current: token,
+        deleteToken: deleteToken
     }
 }
