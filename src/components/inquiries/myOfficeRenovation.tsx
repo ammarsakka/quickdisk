@@ -25,7 +25,7 @@ export default function MyOfficeRenovation({ slug }: Props) {
     const { token } = useToken()
     const Router = useNavigate()
 
-    const [inquiries, setInquiries] = useState<Renovation[]>([])
+    const [inquiries, setInquiries] = useState<Renovation[]>()
 
     const [id, setId] = useState<number>(0)
 
@@ -69,7 +69,7 @@ export default function MyOfficeRenovation({ slug }: Props) {
         )
     }
 
-    if (!inquiries.length)
+    if (!inquiries)
         return (
             <div className='flex justify-center items-center w-full min-h-sidebar'>
                 <HashLoader color="#36d7b7" />

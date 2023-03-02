@@ -24,7 +24,7 @@ export default function MyDGTech({ slug }: Props) {
     const { token } = useToken()
     const Router = useNavigate()
 
-    const [inquiries, setInquiries] = useState<Tech[]>([])
+    const [inquiries, setInquiries] = useState<Tech[]>()
 
     const [id, setId] = useState<number>(0)
 
@@ -64,7 +64,7 @@ export default function MyDGTech({ slug }: Props) {
         )
     }
 
-    if (!inquiries.length)
+    if (!inquiries)
         return (
             <div className='flex justify-center items-center w-full min-h-sidebar'>
                 <HashLoader color="#36d7b7" />

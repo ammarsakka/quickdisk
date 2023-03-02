@@ -20,7 +20,7 @@ export default function Novux({ slug }: { slug: string }) {
     const { token } = useToken()
     const Router = useNavigate()
 
-    const [inquiries, setInquiries] = useState<office[]>([])
+    const [inquiries, setInquiries] = useState<office[]>()
 
     const [id, setId] = useState<number>(0)
 
@@ -60,7 +60,7 @@ export default function Novux({ slug }: { slug: string }) {
         )
     }
 
-    if (!inquiries.length)
+    if (!inquiries)
         return (
             <div className='flex justify-center items-center w-full min-h-sidebar'>
                 <HashLoader color="#36d7b7" />

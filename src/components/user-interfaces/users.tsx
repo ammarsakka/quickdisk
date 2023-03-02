@@ -21,7 +21,7 @@ import { API_URL } from "../api/url"
 export default function Users() {
     const page = 'users'
     const { token } = useToken()
-    const [users, setUsers] = useState<readonly user[]>([])
+    const [users, setUsers] = useState<readonly user[]>()
     const Router = useNavigate()
 
     const [edit, setEdit] = useState<boolean>(false)
@@ -77,7 +77,7 @@ export default function Users() {
         return <CustomUsersToolbar reload={reload} />
     }
 
-    if (!users.length)
+    if (!users)
         return (
             <div className='flex justify-center items-center w-full min-h-sidebar'>
                 <HashLoader color="#36d7b7" />

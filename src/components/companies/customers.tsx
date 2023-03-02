@@ -18,7 +18,7 @@ export default function Customers({ params }: { params: { slug: string } }) {
     const page = `${company} Customers`
     const { token } = useToken()
     const Router = useNavigate()
-    const [customers, setCustomers] = useState<customer[]>([])
+    const [customers, setCustomers] = useState<customer[]>()
 
     const [id, setId] = useState<number>(0)
     const [isEdit, setEdit] = useState(false)
@@ -61,7 +61,7 @@ export default function Customers({ params }: { params: { slug: string } }) {
         }
     }
 
-    if (!customers.length)
+    if (!customers)
         return (
             <div className='flex justify-center items-center w-full min-h-sidebar'>
                 <HashLoader color="#36d7b7" />
