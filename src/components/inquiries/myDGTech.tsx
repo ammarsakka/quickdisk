@@ -2,7 +2,7 @@
 import { DataGrid } from '@mui/x-data-grid'
 import axios from 'axios'
 import { Link, useNavigate } from "react-router-dom"
-import React, { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { Controller } from '../controller/controller'
 import { useToken } from '../token'
 import { Link as Links } from '@mui/material'
@@ -79,9 +79,9 @@ export default function MyDGTech({ slug }: Props) {
                         { field: 'name', headerName: 'Name', flex: 1, renderCell: (e) => <Link to={`/company/${company}/customer/${e.row.customer_id}`}><Links className='cursor-pointer'>{e.formattedValue}</Links></Link> },
                         { field: 'email', headerName: 'Email', flex: 1 },
                         { field: 'phone', headerName: 'Phone', flex: 1 },
-                        { field: 'username', headerName: 'Person in Charge', flex: 1 },
+                        { field: 'company', headerName: 'Company', flex: 1 },
                         { field: 'date', headerName: 'Date', flex: 1, renderCell: (e) => moment(e.formattedValue).format('MMM DD, Y') },
-                        { field: 'created', headerName: 'Created', flex: 1, renderCell: (e) => moment(e.formattedValue).format('MMM DD, Y') },
+                        { field: 'username', headerName: 'Person in Charge', flex: 1 },
                         { field: 'action', headerName: '', flex: 1, renderCell: ({ id }) => <TechActions id={id} handleAction={handleAction} /> },
                     ]}
                     rows={inquiries}

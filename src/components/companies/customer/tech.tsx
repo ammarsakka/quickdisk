@@ -11,6 +11,8 @@ import { CustomWebSiteInquiriesToolbar } from '../../toolbars/inquiries'
 import { Tech } from '../../interfaces/tech'
 import { HashLoader } from 'react-spinners'
 import { API_URL } from '../../api/url'
+import { TechActions } from '../../actions/tech'
+import { Comments } from '../../user/comments'
 
 type Props = {
     slug: string,
@@ -24,6 +26,23 @@ export default function CustomerTech({ slug, user }: Props) {
     const Router = useNavigate()
 
     const [inquiries, setInquiries] = useState<Tech[]>([])
+
+    const [id, setId] = useState<number>(0)
+
+    const [edit, setEdit] = useState(false)
+
+    const handleAction = (id: any, action: string) => {
+        setId(id)
+
+        switch (action) {
+            case 'comment':
+                setEdit(true)
+                break
+
+            default:
+                return
+        }
+    }
 
     const handleInquires = useCallback(() => {
         axios.post(`${API_URL}/user/get/tech/customer`, { token, company, user }).then((result) => {
@@ -58,19 +77,20 @@ export default function CustomerTech({ slug, user }: Props) {
                 <DataGrid
                     columns={[
                         { field: 'inquiry_id', headerName: 'No', flex: 1, renderCell: (e) => <Link target={'_blank'} to={`/company/${company}/form/${e.row.inquiry_id}`}><Links className='cursor-pointer'>{e.formattedValue}</Links></Link> },
-                        { field: 'name', headerName: 'Name', flex: 1, renderCell: (e) => <Link to={`/company/${company}/customer/${e.row.id}`}><Links className='cursor-pointer'>{e.formattedValue}</Links></Link> },
+                        { field: 'name', headerName: 'Name', flex: 1, renderCell: (e) => <Link to={`/company/${company}/customer/${e.row.customer_id}`}><Links className='cursor-pointer'>{e.formattedValue}</Links></Link> },
                         { field: 'email', headerName: 'Email', flex: 1 },
                         { field: 'phone', headerName: 'Phone', flex: 1 },
-                        { field: 'username', headerName: 'Person in Charge', flex: 1 },
+                        { field: 'company', headerName: 'Company', flex: 1 },
                         { field: 'date', headerName: 'Date', flex: 1, renderCell: (e) => moment(e.formattedValue).format('MMM DD, Y') },
-                        { field: 'created', headerName: 'Created', flex: 1, renderCell: (e) => moment(e.formattedValue).format('MMM DD, Y') },
-                        { field: 'action', headerName: '', flex: 1 },
+                        { field: 'username', headerName: 'Person in Charge', flex: 1 },
+                        { field: 'action', headerName: '', flex: 1, renderCell: ({ id }) => <TechActions id={id} handleAction={handleAction} /> },
                     ]}
                     rows={inquiries}
                     disableSelectionOnClick
                     sx={{ width: '100%', height: '100%', minHeight: 'calc(100vh - 45px)', textTransform: 'capitalize' }}
                     components={{ Toolbar: customToolbar }}
                 />
+                <Comments isModule={edit} setModule={setEdit} reload={reload} id={id} data={company} />
             </Controller>
         )
 }
