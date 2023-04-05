@@ -23,9 +23,9 @@ export const App = () => {
         <Route path='/company/:company/home' element={<CompanyDashboard />} />
         <Route path='/company/:company/customers' element={<CompanyCustomers />} />
         <Route path='/company/:company/inquiries' element={<CompanyInquiries />} />
-        <Route path='/company/:company/reports' element={<CompanyReports />} />
         <Route path='/company/:company/form/:inquiry' element={<CompanyForm />} />
         <Route path='/company/:company/customer/:user' element={<CompanyCustomer />} />
+        <Route path='/company/:company/report/:start/:end' element={<CompanyReports />} />
       </Routes>
     </BrowserRouter>
   )

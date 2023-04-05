@@ -2,6 +2,7 @@ import React, { MouseEvent } from 'react'
 import { Button, Menu, MenuItem } from '@mui/material'
 import EditIcon from '@mui/icons-material/Edit';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 interface type {
     id: any,
@@ -60,6 +61,10 @@ export const OfficeActions = ({ id, handleAction }: type) => {
                 <MenuItem className='flex gap-2 items-center' onClick={() => { handleSubmit('comment') }} disableRipple>
                     <EditIcon />
                     Add Comment
+                </MenuItem>
+                <MenuItem className='flex gap-2 items-center' onClick={() => { handleSubmit('status') }} disableRipple>
+                    <CheckCircleIcon />
+                    update status
                 </MenuItem>
             </Menu>
         </div>

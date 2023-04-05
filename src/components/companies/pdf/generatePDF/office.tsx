@@ -147,11 +147,15 @@ const GenerateOfficePdf = ({ office }: { office: office[] }) => {
                             </View>
                             {
                                 office[0]?.comments_comment &&
-                                comments.map((comment: any, index: number) => (
-                                    <View style={styles.tableData} key={index}>
-                                        <Text style={styles.text}>{moment(comment.date).format('MMM DD, Y')}</Text>
-                                    </View>
-                                ))
+                                comments.map((comment: any, index: number) => {
+                                    if (!comment.comment) return
+                                    return (
+
+                                        <View style={styles.tableData} key={index}>
+                                            <Text style={styles.text}>{moment(comment.date).format('MMM DD, Y')}</Text>
+                                        </View>
+                                    )
+                                })
                             }
                         </View>
                         <View style={{ width: '80%' }}>
@@ -160,11 +164,14 @@ const GenerateOfficePdf = ({ office }: { office: office[] }) => {
                             </View>
                             {
                                 office[0]?.comments_comment &&
-                                comments.map((comment: any, index: number) => (
-                                    <View style={styles.tableData} key={index}>
-                                        <Text style={styles.text}>{comment.comment}</Text>
-                                    </View>
-                                ))
+                                comments.map((comment: any, index: number) => {
+                                    if (!comment.comment) return
+                                    return (
+                                        <View style={styles.tableData} key={index}>
+                                            <Text style={styles.text}>{comment.comment}</Text>
+                                        </View>
+                                    )
+                                })
                             }
                         </View>
                     </View>

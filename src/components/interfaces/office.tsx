@@ -6,6 +6,7 @@ export interface office {
     agency: string,
     date: string,
     created: string,
+    status: string,
     virtual_inquiry_id: number,
     virtual_service: string,
     serviced_inquiry_id: number,

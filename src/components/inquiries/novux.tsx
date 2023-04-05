@@ -13,6 +13,8 @@ import { OfficeActions } from '../actions/office'
 import { Comments } from '../user/comments'
 import { HashLoader } from 'react-spinners'
 import { API_URL } from '../api/url'
+import { Status } from '../status'
+import { UpdateStatus } from '../user/status'
 
 export default function Novux({ slug }: { slug: string }) {
     const company = slug
@@ -25,6 +27,7 @@ export default function Novux({ slug }: { slug: string }) {
     const [id, setId] = useState<number>(0)
 
     const [edit, setEdit] = useState(false)
+    const [status, setStatus] = useState(false)
 
     const handleAction = (id: any, action: string) => {
         setId(id)
@@ -32,6 +35,9 @@ export default function Novux({ slug }: { slug: string }) {
         switch (action) {
             case 'comment':
                 setEdit(true)
+                break
+            case 'status':
+                setStatus(true)
                 break
 
             default:
@@ -79,6 +85,7 @@ export default function Novux({ slug }: { slug: string }) {
                         { field: 'agency', headerName: 'Agency', flex: 1 },
                         { field: 'date', headerName: 'Date', flex: 1, renderCell: (e) => moment(e.formattedValue).format('MMM DD, Y') },
                         { field: 'username', headerName: 'Person in Charge', flex: 1 },
+                        { field: 'status', headerName: 'Status', renderCell: (e) => <Status status={e.formattedValue} />, flex: 1 },
                         { field: 'action', headerName: '', flex: 1, renderCell: ({ id }) => <OfficeActions id={id} handleAction={handleAction} /> },
                     ]}
                     rows={inquiries}
@@ -87,6 +94,7 @@ export default function Novux({ slug }: { slug: string }) {
                     components={{ Toolbar: customToolbar }}
                 />
                 <Comments isModule={edit} setModule={setEdit} reload={reload} id={id} data={company} />
+                <UpdateStatus isModule={status} setModule={setStatus} reload={reload} id={id} data={company} />
             </Controller>
         )
 }
