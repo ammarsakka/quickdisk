@@ -14,14 +14,14 @@ const styles = StyleSheet.create({
         flexGrow: 1
     },
     textHead: {
-        fontSize: 12,
-        fontWeight: 'semibold'
+        fontSize: 8,
+        fontWeight: 'extrabold'
     },
     text: {
-        fontSize: 8,
-        display: 'flex',
-        flexDirection: 'row',
+        fontSize: 7,
         lineHeight: 1.3,
+        flexWrap: 'nowrap',
+        display: 'flex'
     },
     table: {
         border: 2,
@@ -68,10 +68,10 @@ const GenerateOfficePdfReport = ({ office }: { office: office[] }) => {
                 <View style={styles.table}>
                     <View>
                         <View style={{ ...styles.flexGorw, flexDirection: 'row' }}>
-                            <View style={{ ...styles.tableHeader, width: '10%' }}>
-                                <Text style={styles.textHead}>Inquiry No</Text>
+                            <View style={{ ...styles.tableHeader, width: '5%' }}>
+                                <Text style={styles.textHead}>Inquiry</Text>
                             </View>
-                            <View style={{ ...styles.tableHeader, width: '10%' }}>
+                            <View style={{ ...styles.tableHeader, width: '8%' }}>
                                 <Text style={styles.textHead}>Date</Text>
                             </View>
                             <View style={{ ...styles.tableHeader, width: '10%' }}>
@@ -83,7 +83,7 @@ const GenerateOfficePdfReport = ({ office }: { office: office[] }) => {
                             <View style={{ ...styles.tableHeader, width: '10%' }}>
                                 <Text style={styles.textHead}>Phone</Text>
                             </View>
-                            <View style={{ ...styles.tableHeader, width: '10%' }}>
+                            <View style={{ ...styles.tableHeader, width: '17%' }}>
                                 <Text style={styles.textHead}>Email Address</Text>
                             </View>
                             <View style={{ ...styles.tableHeader, width: '10%' }}>
@@ -96,10 +96,10 @@ const GenerateOfficePdfReport = ({ office }: { office: office[] }) => {
                         {
                             office.map((item, index) => (
                                 <View style={{ ...styles.flexGorw, flexDirection: 'row' }}>
-                                    <View style={{ ...styles.tableData, backgroundColor: item.status === 'approved' ? green : item.status === 'rejected' ? red : 'white', width: '10%' }} key={index}>
+                                    <View style={{ ...styles.tableData, backgroundColor: item.status === 'approved' ? green : item.status === 'rejected' ? red : 'white', width: '5%' }} key={index}>
                                         <Text style={styles.text}>{item.inquiry_id}</Text>
                                     </View>
-                                    <View style={{ ...styles.tableData, backgroundColor: item.status === 'approved' ? green : item.status === 'rejected' ? red : 'white', width: '10%' }} key={index}>
+                                    <View style={{ ...styles.tableData, backgroundColor: item.status === 'approved' ? green : item.status === 'rejected' ? red : 'white', width: '8%' }} key={index}>
                                         <Text style={styles.text}>{moment(item.date).format('MMM DD, Y')}</Text>
                                     </View>
                                     <View style={{ ...styles.tableData, backgroundColor: item.status === 'approved' ? green : item.status === 'rejected' ? red : 'white', width: '10%' }} key={index}>
@@ -111,7 +111,7 @@ const GenerateOfficePdfReport = ({ office }: { office: office[] }) => {
                                     <View style={{ ...styles.tableData, backgroundColor: item.status === 'approved' ? green : item.status === 'rejected' ? red : 'white', width: '10%' }} key={index}>
                                         <Text style={styles.text}>{item.phone}</Text>
                                     </View>
-                                    <View style={{ ...styles.tableData, backgroundColor: item.status === 'approved' ? green : item.status === 'rejected' ? red : 'white', width: '10%' }} key={index}>
+                                    <View style={{ ...styles.tableData, backgroundColor: item.status === 'approved' ? green : item.status === 'rejected' ? red : 'white', width: '17%' }} key={index}>
                                         <Text style={styles.text}>{item.email}</Text>
                                     </View>
                                     <View style={{ ...styles.tableData, backgroundColor: item.status === 'approved' ? green : item.status === 'rejected' ? red : 'white', width: '10%' }} key={index}>
@@ -139,7 +139,7 @@ const GenerateOfficePdfReport = ({ office }: { office: office[] }) => {
                                             JSON.parse(item.comments_comment).map((comment: any, index: number) => {
                                                 if (!comment.comment) return
                                                 return (
-                                                    <Text style={styles.text} key={index}>{item.name}</Text>
+                                                    <Text style={styles.text} key={index}>{comment.comment}</Text>
                                                 )
                                             })
                                         }

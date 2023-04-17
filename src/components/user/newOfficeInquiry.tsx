@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react'
-import { AutoTextInput, CustomersTextInput, SelectInput, TextInput } from '../inputs'
+import { AutoTextInput, CustomersTextInput, SelectInput, SelectInputMultiple, TextInput } from '../inputs'
 import { Module, ModuleHeader } from '../module'
 import axios from 'axios'
 import { useToken } from '../token'
@@ -20,10 +20,12 @@ export const NewOfficeInquiry = ({ isModule, setModule, reload, data }: type) =>
     const { token } = useToken()
     const [customers, setCustomers] = useState<customer[]>([])
 
+    const [inquiry, setInquiry] = useState<number | undefined>(undefined)
+
     const [virtual, setVirtual] = useState(false)
     const [serviced, setServiced] = useState(false)
     const [meeting, setMeeting] = useState(false)
-    
+
     const [customerName, setCustomerName] = useState('')
     const [customer, setCustomer] = useState(0)
     const [agency, setAgency] = useState('')
@@ -39,9 +41,11 @@ export const NewOfficeInquiry = ({ isModule, setModule, reload, data }: type) =>
     const [servicedRoom, setServicedRoom] = useState('')
     const [servicedRemarks, setServicedRemarks] = useState('')
 
-    const [meetingRoom, setMeetingRoom] = useState('')
-    const [meetingDate, setMeetingDate] = useState('')
-    const [meetingTime, setMeetingTime] = useState('')
+    const [meetingRoom, setMeetingRoom] = useState<string[]>([])
+    const [meetingStartDate, setMeetingStartDate] = useState('')
+    const [meetingEndDate, setMeetingEndDate] = useState('')
+    const [meetingStartTime, setMeetingStartTime] = useState('')
+    const [meetingEndTime, setMeetingEndTime] = useState('')
     const [meetingPax, setMeetingPax] = useState('')
     const [meetingRemarks, setMeetingRemarks] = useState('')
 
@@ -55,20 +59,13 @@ export const NewOfficeInquiry = ({ isModule, setModule, reload, data }: type) =>
     }, [token, data])
 
     const [errorCustomer, setErrorCustomer] = useState(false)
-    const [errorAgency, setErrorAgency] = useState(false)
     const [errorDate, setErrorDate] = useState(false)
 
     const [errorVirtualOffice, setErrorVirtualOffice] = useState(false)
 
-    const [errorServicedBudget, setErrorServicedBudget] = useState(false)
-    const [errorServicedPax, setErrorServicedPax] = useState(false)
-    const [errorServicedDate, setErrorServicedDate] = useState(false)
-    const [errorServicedRoom, setErrorServicedRoom] = useState(false)
+
 
     const [errorMeetingRoom, setErrorMeetingRoom] = useState(false)
-    const [errorMeetingDate, setErrorMeetingDate] = useState(false)
-    const [errorMeetingTime, setErrorMeetingTime] = useState(false)
-    const [errorMeetingPax, setErrorMeetingPax] = useState(false)
 
     useEffect(handleCustomers, [handleCustomers])
 
@@ -76,22 +73,13 @@ export const NewOfficeInquiry = ({ isModule, setModule, reload, data }: type) =>
         setLoading(true)
         setError('')
         setErrorCustomer(false)
-        setErrorAgency(false)
         setErrorDate(false)
 
         setErrorVirtualOffice(false)
 
-        setErrorServicedBudget(false)
-        setErrorServicedPax(false)
-        setErrorServicedDate(false)
-        setErrorServicedRoom(false)
-
         setErrorMeetingRoom(false)
-        setErrorMeetingDate(false)
-        setErrorMeetingTime(false)
-        setErrorMeetingPax(false)
 
-        if (customer && agency && date) {
+        if (customer && date) {
 
             if (virtual) {
                 if (!virtualOffice) {
@@ -101,23 +89,9 @@ export const NewOfficeInquiry = ({ isModule, setModule, reload, data }: type) =>
                 }
             }
 
-            if (serviced) {
-                if (!servicedBudget || !servicedPax || !servicedDate || !servicedRoom) {
-                    if (!servicedBudget) setErrorServicedBudget(true)
-                    if (!servicedPax) setErrorServicedPax(true)
-                    if (!servicedDate) setErrorServicedDate(true)
-                    if (!servicedRoom) setErrorServicedRoom(true)
-                    setLoading(false)
-                    setError('Please fill out the required fields')
-                }
-            }
-
             if (meeting) {
-                if (!meetingRoom || !meetingDate || !meetingTime || !meetingPax) {
+                if (!meetingRoom) {
                     if (!meetingRoom) setErrorMeetingRoom(true)
-                    if (!meetingDate) setErrorMeetingDate(true)
-                    if (!meetingTime) setErrorMeetingTime(true)
-                    if (!meetingPax) setErrorMeetingPax(true)
                     setLoading(false)
                     setError('Please fill out the required fields')
                 }
@@ -127,7 +101,7 @@ export const NewOfficeInquiry = ({ isModule, setModule, reload, data }: type) =>
             setTimeout(() => {
                 if (!error) {
                     axios.post(`${API_URL}/user/set/office/inquriy`, {
-                        inquriy: { customer, agency, date },
+                        inquriy: { inquiry, customer, agency, date },
                         virtual: {
                             virtual,
                             data: { virtualOffice }
@@ -138,7 +112,7 @@ export const NewOfficeInquiry = ({ isModule, setModule, reload, data }: type) =>
                         },
                         meeting: {
                             meeting,
-                            data: { meetingRoom, meetingDate, meetingTime, meetingPax, meetingRemarks }
+                            data: { meetingRoom, meetingStartDate, meetingEndDate, meetingStartTime, meetingEndTime, meetingPax, meetingRemarks }
                         },
                         data,
                         token
@@ -155,7 +129,6 @@ export const NewOfficeInquiry = ({ isModule, setModule, reload, data }: type) =>
             }, 1000)
         } else {
             if (!customer) setErrorCustomer(true)
-            if (!agency) setErrorAgency(true)
             if (!date) setErrorDate(true)
             setError('Please fill out the required fields')
             setLoading(false)
@@ -173,9 +146,11 @@ export const NewOfficeInquiry = ({ isModule, setModule, reload, data }: type) =>
         setServicedDate('')
         setServicedRoom('')
         setServicedRemarks('')
-        setMeetingRoom('')
-        setMeetingDate('')
-        setMeetingTime('')
+        setMeetingRoom([])
+        setMeetingStartDate('')
+        setMeetingEndDate('')
+        setMeetingStartTime('')
+        setMeetingEndTime('')
         setMeetingPax('')
         setMeetingRemarks('')
         setError('')
@@ -187,9 +162,10 @@ export const NewOfficeInquiry = ({ isModule, setModule, reload, data }: type) =>
             <div className='p-4 max-h-[80vh] overflow-hidden overflow-y-scroll sidebar'>
                 <form className='w-full grid gap-4' onSubmit={handleSubmit}>
                     <h1 className='capitalize text-lg font-bold tracking-wider'>inquiry information</h1>
+                    <TextInput label='Inquiry id' value={inquiry} change={setInquiry} type='number' required />
                     <CustomersTextInput label='Customer' value={customerName} change={setCustomerName} required disabled={loading} options={customers} error={errorCustomer} setId={setCustomer} />
                     <div className='flex gap-4 items-center'>
-                        <AutoTextInput label='Agency' value={agency} change={setAgency} required disabled={loading} options={autoCompleteList} error={errorAgency} />
+                        <AutoTextInput label='Agency' value={agency} change={setAgency} disabled={loading} options={autoCompleteList} />
                         <TextInput label='Date' value={date} change={setDate} required disabled={loading} type='date' error={errorDate} />
                     </div>
                     <div>
@@ -203,12 +179,12 @@ export const NewOfficeInquiry = ({ isModule, setModule, reload, data }: type) =>
                     </div>
                     <div className={`gap-4 items-center ${serviced ? 'grid' : 'hidden'}`}>
                         <div className='flex gap-4 items-center'>
-                            <TextInput label='Budget' value={servicedBudget} change={setServicedBudget} required={serviced} disabled={loading} type='number' error={errorServicedBudget} />
-                            <TextInput label='No of Pax' value={servicedPax} change={setServicedPax} required={serviced} disabled={loading} type='number' error={errorServicedPax} />
+                            <TextInput label='Budget' value={servicedBudget} change={setServicedBudget} disabled={loading} type='number' />
+                            <TextInput label='No of Pax' value={servicedPax} change={setServicedPax} disabled={loading} type='number' />
                         </div>
                         <div className='flex gap-4 items-center'>
-                            <TextInput label='Move in Date' value={servicedDate} change={setServicedDate} required={serviced} disabled={loading} type='date' error={errorServicedDate} />
-                            <TextInput label='Type of Room' value={servicedRoom} change={setServicedRoom} required={serviced} disabled={loading} error={errorServicedRoom} />
+                            <TextInput label='Move in Date' value={servicedDate} change={setServicedDate} disabled={loading} type='date' />
+                            <TextInput label='Type of Room' value={servicedRoom} change={setServicedRoom} disabled={loading} />
                         </div>
                         <TextInput label='Remarks' value={servicedRemarks} change={setServicedRemarks} multiline disabled={loading} />
                     </div>
@@ -217,12 +193,16 @@ export const NewOfficeInquiry = ({ isModule, setModule, reload, data }: type) =>
                     </div>
                     <div className={`gap-4 items-center ${meeting ? 'grid' : 'hidden'}`}>
                         <div className='flex gap-4 items-center'>
-                            <SelectInput label='Layout / Room' values={meetingRoom} change={setMeetingRoom} required={meeting} disabled={loading} error={errorMeetingRoom} options={meetingRoomList} />
-                            <TextInput label='Date' value={meetingDate} change={setMeetingDate} required={meeting} disabled={loading} type='date' error={errorMeetingDate} />
+                            <SelectInputMultiple label='Layout / Room' values={meetingRoom} change={setMeetingRoom} required={meeting} disabled={loading} error={errorMeetingRoom} options={meetingRoomList} />
+                            <TextInput label='No of Pax' value={meetingPax} change={setMeetingPax} disabled={loading} type='number' />
                         </div>
                         <div className='flex gap-4 items-center'>
-                            <TextInput label='Time' value={meetingTime} change={setMeetingTime} required={meeting} disabled={loading} type='time' error={errorMeetingTime} />
-                            <TextInput label='No of Pax' value={meetingPax} change={setMeetingPax} required={meeting} disabled={loading} type='number' error={errorMeetingPax} />
+                            <TextInput label='Start Date' value={meetingStartDate} change={setMeetingStartDate} disabled={loading} type='date' />
+                            <TextInput label='End Date' value={meetingEndDate} change={setMeetingEndDate} disabled={loading} type='date' />
+                        </div>
+                        <div className='flex gap-4 items-center'>
+                            <TextInput label='Start Time' value={meetingStartTime} change={setMeetingStartTime} disabled={loading} type='time' />
+                            <TextInput label='End Time' value={meetingEndTime} change={setMeetingEndTime} disabled={loading} type='time' />
                         </div>
                         <TextInput label='Remarks' value={meetingRemarks} change={setMeetingRemarks} multiline disabled={loading} />
                     </div>

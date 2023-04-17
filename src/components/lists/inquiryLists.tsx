@@ -13,8 +13,18 @@ export const meetingRoomList = [
     'classroom',
     'u-shape',
     'banquet',
+    'Meeting room',
+    'Pantry',
+    'Reception Area',
+    'Lounge Area',
+    'Suite (31-1)',
+    'Suite (23-5)',
+    'CEO Room',
 ]
 
 export const autoCompleteList = [
-    { label: 'Direct Call' }
+    { label: 'Direct Call' },
+    { label: 'WhatsApp' },
+    { label: 'Email' },
+    { label: 'Website' },
 ]

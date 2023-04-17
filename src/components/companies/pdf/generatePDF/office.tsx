@@ -57,6 +57,7 @@ const formatter = new Intl.NumberFormat('MY', {
 
 const GenerateOfficePdf = ({ office }: { office: office[] }) => {
     const comments = office[0]?.comments_comment && JSON.parse(office[0]?.comments_comment)
+    const meeting = office[0]?.meeting_room && JSON.parse(office[0]?.meeting_room)
     return (
         <Document>
             <Page size='A4' style={styles.page}>
@@ -131,9 +132,9 @@ const GenerateOfficePdf = ({ office }: { office: office[] }) => {
                                 <Text style={styles.textHead}>Meeting Room/Shooting</Text>
                             </View>
                             <View style={styles.tableData}>
-                                <Text style={styles.text}>Layout/Room: {office[0]?.meeting_room}</Text>
-                                <Text style={styles.text}>Date: {moment(office[0]?.meeting_date).format('MMM DD, Y')}</Text>
-                                <Text style={styles.text}>Time: {moment(office[0]?.meeting_time, "HH:mm:ss").format('hh:mm A')}</Text>
+                                <Text style={styles.text}>Layout/Room: {meeting && (meeting as []).join(', ')}</Text>
+                                <Text style={styles.text}>Date: {moment(office[0]?.meeting_start_date).format('MMM DD, Y')} - {moment(office[0]?.meeting_end_date).format('MMM DD, Y')}</Text>
+                                <Text style={styles.text}>Time: {moment(office[0]?.meeting_start_time, "HH:mm:ss").format('hh:mm A')} - {moment(office[0]?.meeting_end_time, "HH:mm:ss").format('hh:mm A')}</Text>
                                 <Text style={styles.text}>No of Pax: {office[0]?.meeting_pax}</Text>
                                 <Text style={styles.text}>Remarks: {office[0]?.meeting_remarks}</Text>
                             </View>
