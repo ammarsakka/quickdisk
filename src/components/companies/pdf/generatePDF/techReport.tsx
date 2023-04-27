@@ -118,17 +118,17 @@ const GenerateTechPdfReport = ({ tech }: { tech: Tech[] }) => {
                                         <View style={{...styles.text, gap: 2, flexDirection: 'column'}}>
                                             <Text>
                                                 {
-                                                    item.production_inquiry_id ? 'Virtual Office' : ''
+                                                    item.production_inquiry_id ? 'Production Studio' : ''
                                                 }
                                             </Text>
                                             <Text>
                                                 {
-                                                    item.website_inquiry_id ? 'Meeting Room' : ''
+                                                    item.website_inquiry_id ? 'Website Design' : ''
                                                 }
                                             </Text>
                                             <Text>
                                                 {
-                                                    item.design_inquiry_id ? 'Serviced Office' : ''
+                                                    item.design_inquiry_id ? 'Graphic Design' : ''
                                                 }
                                             </Text>
                                         </View>
