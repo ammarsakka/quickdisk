@@ -77,7 +77,7 @@ export default function Companies() {
             <Controller page={page}>
                 <DataGrid
                     columns={[
-                        { field: 'avatar', headerName: 'Company Logo', renderCell: (e) => <img src={`/images/company/${e.formattedValue}`} alt={e.formattedValue} className='h-[90%] w-14 object-contain' /> },
+                        { field: 'avatar', headerName: 'Company Logo', renderCell: (e) => <img src={`/quickdisk/images/company/${e.formattedValue}`} alt={e.formattedValue} className='h-[90%] w-14 object-contain' /> },
                         { field: 'name', headerName: 'Company Name', flex: 1 },
                         { field: 'created', headerName: 'Date', flex: 1, renderCell: (e) => moment(e.formattedValue).format('MMM DD, Y') },
                         // { field: 'action', headerName: '', flex: 0, renderCell: ({ id }) => <CompaniesActions id={id} handleAction={handleAction} /> }

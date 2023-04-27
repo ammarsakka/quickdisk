@@ -237,7 +237,7 @@ export const ImageInput = ({ label, value, change, required = false, disabled = 
         <div className='w-full relative overflow-hidden rounded upload-image'>
             <label htmlFor={`${label.replaceAll(" ", "_")}_${random}`} className='absolute top-0 left-0 w-full h-full bg-black/10 backdrop-blur-sm flex items-center justify-center capitalize font-semibold text-lg cursor-pointer'>{label}</label>
             <input type="file" name={`${label.replaceAll(" ", "_")}_${random}`} id={`${label.replaceAll(" ", "_")}_${random}`} hidden onChange={e => change(e.target.files)} required={required} />
-            <img src={value ? value.length ? URL.createObjectURL(value[0]) : (imageName ? `/images/${dir}/${imageName}` : '/images/main/photo.png') : (imageName ? `/images/${dir}/${imageName}` : '/images/main/photo.png')} alt={label} className='h-[300px] mx-auto object-contain' />
+            <img src={value ? value.length ? URL.createObjectURL(value[0]) : (imageName ? `/quickdisk/images/${dir}/${imageName}` : '/quickdisk/images/main/photo.png') : (imageName ? `/quickdisk/images/${dir}/${imageName}` : '/quickdisk/images/main/photo.png')} alt={label} className='h-[300px] mx-auto object-contain' />
         </div>
     )
 }

@@ -69,7 +69,7 @@ export const ListButton = ({ title, icon, url, selected, parent = false }: menuL
         <>
             <ListItemButton onClick={handleClick}>
                 <ListItemIcon className='!w-9 min-w-fit'>
-                    <img src={`/images/company/${icon}`} alt={title} className='h-6 w-6 object-contain' />
+                    <img src={`/quickdisk/images/company/${icon}`} alt={title} className='h-6 w-6 object-contain' />
                 </ListItemIcon>
                 <ListItemText className='capitalize overflow-hidden'>{title}</ListItemText>
                 {open ? <ExpandLessIcon /> : <ExpandMoreIcon />}
