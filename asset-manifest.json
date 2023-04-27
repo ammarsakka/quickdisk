@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/quickdisk/static/css/main.2bd686b3.css",
-    "main.js": "/quickdisk/static/js/main.a7050af9.js",
+    "main.css": "/quickdisk/static/css/main.ecad358e.css",
+    "main.js": "/quickdisk/static/js/main.e44460cc.js",
     "index.html": "/quickdisk/index.html",
-    "main.2bd686b3.css.map": "/quickdisk/static/css/main.2bd686b3.css.map",
-    "main.a7050af9.js.map": "/quickdisk/static/js/main.a7050af9.js.map"
+    "main.ecad358e.css.map": "/quickdisk/static/css/main.ecad358e.css.map",
+    "main.e44460cc.js.map": "/quickdisk/static/js/main.e44460cc.js.map"
   },
   "entrypoints": [
-    "static/css/main.2bd686b3.css",
-    "static/js/main.a7050af9.js"
+    "static/css/main.ecad358e.css",
+    "static/js/main.e44460cc.js"
   ]
 }
