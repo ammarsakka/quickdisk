@@ -15,7 +15,7 @@ export const NewReport = ({ isModule, setModule, data }: type) => {
 
     const handleSubmit = () => {
         if (start && end) {
-            window.open(`/company/${data}/report/${start}/${end}`, '_blank')
+            window.open(`/quickdisk/#/company/${data}/report/${start}/${end}`, '_blank')
         }
     }
 
