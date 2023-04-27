@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/quickdisk/static/css/main.2bd686b3.css",
+    "main.js": "/quickdisk/static/js/main.b8817c06.js",
+    "index.html": "/quickdisk/index.html",
+    "main.2bd686b3.css.map": "/quickdisk/static/css/main.2bd686b3.css.map",
+    "main.b8817c06.js.map": "/quickdisk/static/js/main.b8817c06.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2bd686b3.css",
+    "static/js/main.b8817c06.js"
+  ]
+}
