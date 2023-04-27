@@ -91,7 +91,7 @@ const GenerateRenovationPdf = ({ renovation }: { renovation: Renovation[] }) => 
                         <Text style={styles.smallText}>Email: myofficerenovation@gmail.com</Text>
                     </View>
                     <View>
-                        <Image src={'/images/company/Renovation_14947.454407695024.png'} style={{ width: 75, height: 'auto', objectFit: 'content' }} />
+                        <Image src={'/quickdisk/images/company/Renovation_14947.454407695024.png'} style={{ width: 75, height: 'auto', objectFit: 'content' }} />
                     </View>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 5, marginBottom: 5 }}>

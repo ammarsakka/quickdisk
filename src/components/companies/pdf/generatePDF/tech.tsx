@@ -77,7 +77,7 @@ const GenerateTechPdf = ({ tech }: { tech: Tech[] }) => {
             <Page size='A4' style={styles.page}>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 10, marginBottom: 10 }}>
                     <View>
-                        <Image src={'/images/company/MyDGTech_41907.22979631614.png'} style={{ width: 75, height: 'auto', objectFit: 'content' }} />
+                        <Image src={'/quickdisk/images/company/MyDGTech_41907.22979631614.png'} style={{ width: 75, height: 'auto', objectFit: 'content' }} />
                     </View>
                     <View style={{ width: '100%', maxWidth: 450 }}>
                         <Text style={{ fontSize: 20, fontWeight: 'bold', textTransform: 'uppercase', textAlign: 'center', letterSpacing: 0.2 }}>Mydgtech</Text>
