@@ -13,6 +13,9 @@ import { TechActions } from '../actions/tech'
 import { Comments } from '../user/comments'
 import { HashLoader } from 'react-spinners'
 import { API_URL } from '../api/url'
+import { UpdateStatus } from '../user/status'
+import { Status } from '../status'
+import { DeleteInquiry } from '../user/delete'
 
 type Props = {
     slug: string
@@ -29,6 +32,8 @@ export default function MyDGTech({ slug }: Props) {
     const [id, setId] = useState<number>(0)
 
     const [edit, setEdit] = useState(false)
+    const [status, setStatus] = useState(false)
+    const [isDelete, setDelete] = useState(false)
 
     const handleAction = (id: any, action: string) => {
         setId(id)
@@ -36,6 +41,12 @@ export default function MyDGTech({ slug }: Props) {
         switch (action) {
             case 'comment':
                 setEdit(true)
+                break
+            case 'status':
+                setStatus(true)
+                break
+            case 'delete':
+                setDelete(true)
                 break
 
             default:
@@ -82,6 +93,7 @@ export default function MyDGTech({ slug }: Props) {
                         { field: 'company', headerName: 'Company', flex: 1 },
                         { field: 'date', headerName: 'Date', flex: 1, renderCell: (e) => moment(e.formattedValue).format('MMM DD, Y') },
                         { field: 'username', headerName: 'Person in Charge', flex: 1 },
+                        { field: 'status', headerName: 'Status', renderCell: (e) => <Status status={e.formattedValue} />, flex: 1 },
                         { field: 'action', headerName: '', flex: 1, renderCell: ({ id }) => <TechActions id={id} handleAction={handleAction} /> },
                     ]}
                     rows={inquiries}
@@ -90,6 +102,8 @@ export default function MyDGTech({ slug }: Props) {
                     components={{ Toolbar: customToolbar }}
                 />
                 <Comments isModule={edit} setModule={setEdit} reload={reload} id={id} data={company} />
+                <UpdateStatus isModule={status} setModule={setStatus} reload={reload} id={id} data={company} />
+                <DeleteInquiry isModule={isDelete} setModule={setDelete} reload={reload} id={id} data={company} />
             </Controller>
         )
 }

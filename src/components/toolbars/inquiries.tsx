@@ -54,6 +54,7 @@ export const CustomRenovationInquiriesToolbar = ({ reload, data }: reload) => {
 
 export const CustomWebSiteInquiriesToolbar = ({ reload, data }: reload) => {
     const [open, setOpen] = useState(false)
+    const [report, setReport] = useState(false)
 
     return (
         <div className='flex items-center justify-between p-2'>
@@ -61,8 +62,12 @@ export const CustomWebSiteInquiriesToolbar = ({ reload, data }: reload) => {
                 <IconButton label='add new inquiry' click={() => { setOpen(true) }} icon={<AddIcon />} size='small' />
                 <GridToolbarQuickFilter />
             </div>
-            <CustomToolbar />
+            {/* <CustomToolbar /> */}
+            <div>
+                <IconButton label='report' click={() => { setReport(true) }} icon={<DescriptionIcon />} size='small' />
+            </div>
             <NewTechInquiry isModule={open} setModule={setOpen} reload={reload} data={data} />
+            <NewReport isModule={report} setModule={setReport} data={data} />
         </div>
     )
 }

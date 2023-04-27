@@ -3,6 +3,7 @@ export interface Tech {
     inquiry_id: string,
     customer_id: number,
     user_id: number,
+    status: string,
     date: string,
     created: string,
     design_inquiry_id: string,

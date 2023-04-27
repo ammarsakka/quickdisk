@@ -2,6 +2,8 @@ import React, { MouseEvent } from 'react'
 import { Button, Menu, MenuItem } from '@mui/material'
 import EditIcon from '@mui/icons-material/Edit';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 interface type {
     id: any,
@@ -60,6 +62,14 @@ export const TechActions = ({ id, handleAction }: type) => {
                 <MenuItem className='flex gap-2 items-center' onClick={() => { handleSubmit('comment') }} disableRipple>
                     <EditIcon />
                     Add Comment
+                </MenuItem>
+                <MenuItem className='flex gap-2 items-center' onClick={() => { handleSubmit('status') }} disableRipple>
+                    <CheckCircleIcon />
+                    update status
+                </MenuItem>
+                <MenuItem className='flex gap-2 items-center' onClick={() => { handleSubmit('delete') }} disableRipple sx={{ color: 'red' }} >
+                    <DeleteIcon />
+                    delete
                 </MenuItem>
             </Menu>
         </div>

@@ -8,10 +8,11 @@ interface type {
     loading?: boolean,
     icon?: ReactNode,
     size: "large" | "medium" | "small",
-    variant?: "contained" | "outlined" | "text"
+    variant?: "contained" | "outlined" | "text",
+    color?: "error" | "info" | "inherit" | "primary" | "secondary" | "success" | "warning"
 }
 
-export const Button = ({ label, click, disabled = false, loading = false, size, variant = 'contained' }: type) => {
+export const Button = ({ label, click, disabled = false, loading = false, size, variant = 'contained', color = 'primary' }: type) => {
     return (
         <LoadingButton
             size={size}
@@ -19,14 +20,15 @@ export const Button = ({ label, click, disabled = false, loading = false, size, 
             loading={loading}
             variant={variant}
             disabled={disabled}
-            className={`w-full ${variant === 'contained' && '!bg-sky-700 !hover:bg-sky-800'}`}
+            className={`w-full`}
+            color={color}
         >
             <span>{label}</span>
         </LoadingButton>
     )
 }
 
-export const IconButton = ({ label, click, disabled = false, loading = false, icon, size, variant = 'contained' }: type) => {
+export const IconButton = ({ label, click, disabled = false, loading = false, icon, size, variant = 'contained', color = 'primary' }: type) => {
     return (
         <LoadingButton
             size={size}
@@ -43,7 +45,7 @@ export const IconButton = ({ label, click, disabled = false, loading = false, ic
     )
 }
 
-export const IconDeleteButton = ({ label, click, disabled = false, loading = false, icon, size, variant = 'contained' }: type) => {
+export const IconDeleteButton = ({ label, click, disabled = false, loading = false, icon, size, variant = 'contained', color = 'primary' }: type) => {
     return (
         <LoadingButton
             size={size}
@@ -60,7 +62,7 @@ export const IconDeleteButton = ({ label, click, disabled = false, loading = fal
     )
 }
 
-export const EditButton = ({ label, click, disabled = false, loading = false, icon, size, variant = 'outlined' }: type) => {
+export const EditButton = ({ label, click, disabled = false, loading = false, icon, size, variant = 'outlined', color = 'primary' }: type) => {
     return (
         <LoadingButton
             size={size}

@@ -15,6 +15,7 @@ import { HashLoader } from 'react-spinners'
 import { API_URL } from '../api/url'
 import { Status } from '../status'
 import { UpdateStatus } from '../user/status'
+import { DeleteInquiry } from '../user/delete'
 
 export default function Novux({ slug }: { slug: string }) {
     const company = slug
@@ -28,6 +29,7 @@ export default function Novux({ slug }: { slug: string }) {
 
     const [edit, setEdit] = useState(false)
     const [status, setStatus] = useState(false)
+    const [isDelete, setDelete] = useState(false)
 
     const handleAction = (id: any, action: string) => {
         setId(id)
@@ -38,6 +40,9 @@ export default function Novux({ slug }: { slug: string }) {
                 break
             case 'status':
                 setStatus(true)
+                break
+            case 'delete':
+                setDelete(true)
                 break
 
             default:
@@ -95,6 +100,7 @@ export default function Novux({ slug }: { slug: string }) {
                 />
                 <Comments isModule={edit} setModule={setEdit} reload={reload} id={id} data={company} />
                 <UpdateStatus isModule={status} setModule={setStatus} reload={reload} id={id} data={company} />
+                <DeleteInquiry isModule={isDelete} setModule={setDelete} reload={reload} id={id} data={company} />
             </Controller>
         )
 }
