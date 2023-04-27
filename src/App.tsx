@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import Home from './Home'
 import Login from './Login'
 import Dashboard from './controller/home'
@@ -13,7 +13,7 @@ import CompanyCustomer from './company/customer'
 
 export const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
@@ -27,7 +27,7 @@ export const App = () => {
         <Route path='/company/:company/customer/:user' element={<CompanyCustomer />} />
         <Route path='/company/:company/report/:start/:end' element={<CompanyReports />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
