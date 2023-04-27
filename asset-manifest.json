@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/quickdisk/static/css/main.2bd686b3.css",
-    "main.js": "/quickdisk/static/js/main.6fc43b75.js",
+    "main.js": "/quickdisk/static/js/main.a7050af9.js",
     "index.html": "/quickdisk/index.html",
     "main.2bd686b3.css.map": "/quickdisk/static/css/main.2bd686b3.css.map",
-    "main.6fc43b75.js.map": "/quickdisk/static/js/main.6fc43b75.js.map"
+    "main.a7050af9.js.map": "/quickdisk/static/js/main.a7050af9.js.map"
   },
   "entrypoints": [
     "static/css/main.2bd686b3.css",
-    "static/js/main.6fc43b75.js"
+    "static/js/main.a7050af9.js"
   ]
 }
