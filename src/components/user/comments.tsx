@@ -119,7 +119,7 @@ export const Comments = ({ isModule, setModule, reload, data, id }: type) => {
                                         value={comment.comment}
                                         onChange={e => {
                                             const data = [...comments]
-                                            data[index].comment = e.target.value
+                                            data[index].comment = e.target.value.replaceAll("'","''")
                                             setComments(data)
                                         }}
                                         required
