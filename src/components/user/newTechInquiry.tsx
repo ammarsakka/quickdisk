@@ -128,7 +128,7 @@ export const NewTechInquiry = ({ isModule, setModule, reload, data }: type) => {
                                     designSize,
                                     designContent,
                                     designTheme,
-                                    designRemark,
+                                    designRemark: designRemark.replaceAll("'", "''"),
                                     designBudget,
                                     designDue,
                                 }
@@ -147,7 +147,7 @@ export const NewTechInquiry = ({ isModule, setModule, reload, data }: type) => {
                                             }
                                         }
                                     },
-                                    productionRemark,
+                                    productionRemark: productionRemark.replaceAll("'", "''"),
                                     productionBudget,
                                     productionDue,
                                 }
@@ -170,7 +170,7 @@ export const NewTechInquiry = ({ isModule, setModule, reload, data }: type) => {
                                             }
                                         }
                                     },
-                                    websiteRemark,
+                                    websiteRemark: websiteRemark.replaceAll("'", "''"),
                                     websiteBudget,
                                     websiteDue,
                                 }
