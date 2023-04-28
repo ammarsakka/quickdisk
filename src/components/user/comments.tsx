@@ -66,7 +66,7 @@ export const Comments = ({ isModule, setModule, reload, data, id }: type) => {
         setError('')
 
         setTimeout(() => {
-            axios.post(`${API_URL}/user/update/commet`, { comments, data, token, id }).then((result) => {
+            axios.post(`${API_URL}/user/update/commet`, { comments: JSON.stringify(comments).replaceAll("'", "''"), data, token, id }).then((result) => {
                 if (result.data.status === 200) {
                     reload()
                     setModule(false)
@@ -119,7 +119,7 @@ export const Comments = ({ isModule, setModule, reload, data, id }: type) => {
                                         value={comment.comment}
                                         onChange={e => {
                                             const data = [...comments]
-                                            data[index].comment = e.target.value.replaceAll("'","''")
+                                            data[index].comment = e.target.value
                                             setComments(data)
                                         }}
                                         required
