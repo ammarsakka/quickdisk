@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 14, 2023 at 08:25 AM
+-- Generation Time: Jun 28, 2023 at 12:16 PM
 -- Server version: 8.0.31
 -- PHP Version: 8.0.26
 
@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `mydgtech_tables_comments` (
   `comments_comment` json NOT NULL,
   PRIMARY KEY (`comments_id`),
   KEY `inquiry_id` (`comments_inquiry_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=61 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `mydgtech_tables_comments`
@@ -118,7 +118,15 @@ INSERT INTO `mydgtech_tables_comments` (`comments_id`, `comments_inquiry_id`, `c
 (49, 48, '[{\"id\": 0, \"date\": \"2023-03-30\", \"comment\": \"*client asked an inquiry for brochure design \"}, {\"id\": 1, \"date\": \"2023-03-30\", \"comment\": \"*client need in Bahasa Melayu brochure\"}, {\"id\": 2, \"date\": \"2023-03-30\", \"comment\": \"*send the quotation to clients next week \"}, {\"id\": 3, \"date\": \"2023-04-05\", \"comment\": \"*f/u on the updated (05/04); send the invoice to the client \"}, {\"id\": 4, \"date\": \"2023-04-06\", \"comment\": \"*f/u on the updated (06/04); waiting for client to made a payment \"}, {\"id\": 5, \"date\": \"2023-04-07\", \"comment\": \"*f/u on the updated (07/04); client made a payment \"}]'),
 (50, 49, '[{\"id\": 0, \"date\": \"2023-03-31\", \"comment\": \"*client asked an inquiry for web design for page via Email and liaised thru WS and Phone Call ; About us, events, registration + payment gateway, membership\"}, {\"id\": 1, \"date\": \"2023-03-31\", \"comment\": \"*send the client details in inquiry group and mentioned the PIC\"}, {\"id\": 2, \"date\": \"2023-03-31\", \"comment\": \"*client need a quotation \"}, {\"id\": 3, \"date\": \"2023-03-31\", \"comment\": \"*f/u on the updated (31/03); send the quotation to the client via email \"}, {\"id\": 4, \"date\": \"2023-04-03\", \"comment\": \"*f/u on the update (03/04); client received the email and will update if they want proceed\"}, {\"id\": 5, \"date\": \"2023-04-06\", \"comment\": \"*f/u on the updated (06/04); client have choose the other company \"}]'),
 (51, 69, '[{\"id\": 0, \"date\": \"2023-06-01\", \"comment\": \"- client asked an inquiry for video shooting at different locations such as Airports, and ports\"}, {\"id\": 1, \"date\": \"2023-06-01\", \"comment\": \"- client asked inquiry for 3 days shooting\"}, {\"id\": 2, \"date\": \"2023-06-02\", \"comment\": \"- Mr Ali send the quotation to client\"}]'),
-(52, 68, '[{\"id\": 0, \"date\": \"2023-06-08\", \"comment\": \"- client asked for graphic design services for long-term collaboration\"}, {\"id\": 1, \"date\": \"2023-06-08\", \"comment\": \"- client need packages for visual design such as poster, brand promotion visual\"}, {\"id\": 2, \"date\": \"2023-06-08\", \"comment\": \"- client quote for price of doing 20 designs (poster design, promotion visual and so on) for 3-4 designs in a month in AI format\"}, {\"id\": 3, \"date\": \"2023-06-09\", \"comment\": \"- f/u on the updated (09/06); send the quotation to client \"}, {\"id\": 4, \"date\": \"2023-06-12\", \"comment\": \"- f/u on the updated (12/06); no response\"}, {\"id\": 5, \"date\": \"2023-06-13\", \"comment\": \"- f/u on the updated (13/06); client hire another designer\"}]');
+(52, 68, '[{\"id\": 0, \"date\": \"2023-06-08\", \"comment\": \"- client asked for graphic design services for long-term collaboration\"}, {\"id\": 1, \"date\": \"2023-06-08\", \"comment\": \"- client need packages for visual design such as poster, brand promotion visual\"}, {\"id\": 2, \"date\": \"2023-06-08\", \"comment\": \"- client quote for price of doing 20 designs (poster design, promotion visual and so on) for 3-4 designs in a month in AI format\"}, {\"id\": 3, \"date\": \"2023-06-09\", \"comment\": \"- f/u on the updated (09/06); send the quotation to client \"}, {\"id\": 4, \"date\": \"2023-06-12\", \"comment\": \"- f/u on the updated (12/06); no response\"}, {\"id\": 5, \"date\": \"2023-06-13\", \"comment\": \"- f/u on the updated (13/06); client hire another designer\"}]'),
+(53, 70, '[{\"id\": 0, \"date\": \"2023-06-12\", \"comment\": \"- client asked an inquiry for 2 videos via WhatsApp\"}, {\"id\": 1, \"date\": \"2023-06-12\", \"comment\": \"- client need 1 video with 2 talents for 6 minutes and 1 video with 1 talents for 4 minutes\"}, {\"id\": 2, \"date\": \"2023-06-12\", \"comment\": \"- they would like to have educational video to promote road safety campaign featuring professional motorbike racer\"}, {\"id\": 3, \"date\": \"2023-06-13\", \"comment\": \"- f/u on the updated (13/06); send 2 different quotation to the client via WS\"}, {\"id\": 4, \"date\": \"2023-06-13\", \"comment\": \"- first quotation based on their requirement and second quotation with extra shots for videos\"}, {\"id\": 5, \"date\": \"2023-06-14\", \"comment\": \"- f/u on the updated (14/06); client will update by next week\"}, {\"id\": 6, \"date\": \"2023-06-16\", \"comment\": \"- f/u on the updated (16/06); client asked a technical part and asked Mr Ali to liaised to them\"}, {\"id\": 7, \"date\": \"2023-06-19\", \"comment\": \"- f/u on the updated (19/06); client and dgtech production team having a meeting at Berjaya Sompo office at level 36\"}]'),
+(54, 71, '[{\"id\": 0, \"date\": \"2023-06-17\", \"comment\": \"- client asked the rate for landing page and basic website via WS\"}, {\"id\": 1, \"date\": \"2023-06-17\", \"comment\": \"- we inform to them our landing price starting at RM3,000 but their budget only for RM2,000\"}, {\"id\": 2, \"date\": \"2023-06-19\", \"comment\": \"- f/u on the updated (19/06); they are looking for small business F&B website\"}, {\"id\": 3, \"date\": \"2023-06-20\", \"comment\": \"- f/u on the updated (20/06); asked for the sample but didn\'t reply and we share the example of F&B page that suite with their budget and not inclusive domain and hosting\"}, {\"id\": 4, \"date\": \"2023-06-20\", \"comment\": \"- f/u on the updated (20/06); the client mentioned don\'t have the updated from the team yet and they will decided once have the updated\"}, {\"id\": 5, \"date\": \"2023-06-21\", \"comment\": \"- f/u on the updated (21/06); the client asked how much we will charge for additional stock image and we inform to them we will give 10 complimentary stock image and for additional stock image they need to pay RM10/per stock image\"}, {\"id\": 6, \"date\": \"2023-06-22\", \"comment\": \"- f/u on the updated (22/06); client asked the price for domain and hosting, we mentioned that the price is RM800 annually\"}, {\"id\": 7, \"date\": \"2023-06-23\", \"comment\": \"- f/u on the updated (23/06); they will keep in touch once they decided\"}]'),
+(55, 72, '[{\"id\": 0, \"date\": \"2023-06-20\", \"comment\": \"- client asked an inquiry for Web Introduction Video aka User Guide Video and they provide link youtube as reference to us\"}, {\"id\": 1, \"date\": \"2023-06-20\", \"comment\": \"- client provide full details for their inquiry and they need within 3 minutes video\"}, {\"id\": 2, \"date\": \"2023-06-20\", \"comment\": \"- the deadline of the project is on 30th June 2023\"}, {\"id\": 3, \"date\": \"2023-06-21\", \"comment\": \"- f/u on the updated (21/06); send the quotation to the client\"}, {\"id\": 4, \"date\": \"2023-06-22\", \"comment\": \"- f/u on the updated (22/06); asked for the updated inquiry and quotation but the client need to confirm with the boss and will update ASAP\"}, {\"id\": 5, \"date\": \"2023-06-23\", \"comment\": \"- f/u on the updated (23/06); no response\"}]'),
+(56, 73, '[{\"id\": 0, \"date\": \"2023-06-21\", \"comment\": \"- client email to us regarding their organization would like to have a convocation development on 4th November 2023\"}, {\"id\": 1, \"date\": \"2023-06-21\", \"comment\": \"- client would like to have a quotation for this criteria; concept development, collateral adaption, microsite development. \"}, {\"id\": 2, \"date\": \"2023-06-21\", \"comment\": \"- the details for the quotation design; convo booklet A4 size (40 pages include cover & back), Convo guidebook (PDF & softcopy for students), Invitation card for vip, students and parents, backdrop design on stage (Physical), backdrop design on stage (Digital screen-right & left side), content design for digital screen, photo op design, banner/bunting design, instagram filters, EDM invite (for external and internal-email blast)\"}, {\"id\": 3, \"date\": \"2023-06-21\", \"comment\": \"- the details for printing of collaterals; convo booklet A4 size (40 pages include cover & back) - 250pcs; Invitation card for VIP (Include envelope) - 50pcs; Invitation card for students & parents (include envelope) - 200pcs\"}, {\"id\": 4, \"date\": \"2023-06-22\", \"comment\": \"- f/u on the updated (22/06); whatsapp the client regarding the budget and she mentioned the budget is RM33,000 including printing\"}, {\"id\": 5, \"date\": \"2023-06-22\", \"comment\": \"- f/u on the updated (22/06); the client provide details material for printing; Invitation card - Size 241mm(w) x 114mm(h); for VIP (hot stamped Finish); Material - shing card; Inclusive Envelope\"}, {\"id\": 6, \"date\": \"2023-06-22\", \"comment\": \"- f/u on the updated (22/06); for booklet printing; A4 Size; 40 pages; cover, back 260gsm art card; matt lamination; spot UV; Inner 128gsm art paper; Perfect Binding\"}, {\"id\": 7, \"date\": \"2023-06-22\", \"comment\": \"- the client mentioned for invitation card they are open suggestion/design from agency\"}, {\"id\": 8, \"date\": \"2023-06-23\", \"comment\": \"- f/u on the updated (23/06); send the quotation to the client via email\"}]'),
+(57, 74, '[{\"id\": 0, \"date\": \"2023-06-21\", \"comment\": \"- client asked an inquiry for website package via WS and the client share to us their website content\"}, {\"id\": 1, \"date\": \"2023-06-22\", \"comment\": \"- liaised with the client thru phone call and the client need to change the logos, graphic, content by our side and they share the example website that they would prefer to change\"}, {\"id\": 2, \"date\": \"2023-06-22\", \"comment\": \"- the client budget is only RM1500\"}, {\"id\": 3, \"date\": \"2023-06-22\", \"comment\": \"- f/u on the updated (22/06); send the revised quotation based on the website that they would like to have and the give price is including graphic, content and domain. The price is RM2,650\"}, {\"id\": 4, \"date\": \"2023-06-23\", \"comment\": \"- f/u on the updated (23/06); no response \"}]'),
+(58, 75, '[{\"id\": 0, \"date\": \"2023-06-22\", \"comment\": \"- client asked for backdrop design via phone call and we liaised via WS\"}, {\"id\": 1, \"date\": \"2023-06-22\", \"comment\": \"- client mentioned it can be re-use on other property expo (might have to resize but still using same artwork)\"}, {\"id\": 2, \"date\": \"2023-06-22\", \"comment\": \"- their budget is RM1000 per artwork (including amendments) and they need the working file upon artwork final delivery\"}, {\"id\": 3, \"date\": \"2023-06-22\", \"comment\": \"- their additional info: artwork will combine 2 +1 project in one design; 2 from 3 storey semi-detached house project, 1 high-rise condo project\"}, {\"id\": 4, \"date\": \"2023-06-22\", \"comment\": \"- they will provide to us project logo, company logo, project facade images and colour guildeline\"}, {\"id\": 5, \"date\": \"2023-06-22\", \"comment\": \"- send the quotation to the client and give price is RM901\"}, {\"id\": 6, \"date\": \"2023-06-22\", \"comment\": \"- the client called and mention to add more additional item regarding the size of the artwork\"}, {\"id\": 7, \"date\": \"2023-06-23\", \"comment\": \"- f/u on the updated (23/06); send the revised quotation to the client and mention to him; for artwork sizing artwork we don\'t charge anything unless the client would like to have a different design and after 4 times ammend\"}, {\"id\": 8, \"date\": \"2023-06-23\", \"comment\": \"- f/u on the updated (23/06); no response\"}]'),
+(59, 76, '[{\"id\": 0, \"date\": \"2023-06-22\", \"comment\": \"- the client asked an inquiry for video production; the event will be on August at Sunway Pyramid for 5 hours; Grand opening event\"}, {\"id\": 1, \"date\": \"2023-06-22\", \"comment\": \"- the client need grand opening event video; for 2 - 4 minutes video; the deadline within a week after grand opening event; their budget only for RM1,000\"}, {\"id\": 2, \"date\": \"2023-06-22\", \"comment\": \"- the client share to use the link for example of the videos as reference\"}, {\"id\": 3, \"date\": \"2023-06-23\", \"comment\": \"- f/u on the updated (23/06); send the quotation to the client and given price RM10,000 the minimum price for video production\"}, {\"id\": 4, \"date\": \"2023-06-23\", \"comment\": \"- f/u on the updated (23/06); the client would like to have a look first and discuss with management\"}]'),
+(60, 77, '[{\"id\": 0, \"date\": \"2023-06-22\", \"comment\": \"- client asked an inquiry for Poster design and packaging box design via email but client didn\'t provide the full details. \"}, {\"id\": 1, \"date\": \"2023-06-22\", \"comment\": \"- client would like to have for 4 poster design and 1 packaging box design; they will provide the photos for the product\"}, {\"id\": 2, \"date\": \"2023-06-22\", \"comment\": \"- send the quotation to the client and the given price is RM2,120\"}, {\"id\": 3, \"date\": \"2023-06-23\", \"comment\": \"- f/u on the updated (23/06); the client asked to have a discussion on Tuesday (27/06/2023) at 3pm\"}]');
 
 -- --------------------------------------------------------
 
@@ -139,7 +147,7 @@ CREATE TABLE IF NOT EXISTS `mydgtech_tables_customers` (
   `size` varchar(50) DEFAULT NULL,
   `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=60 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=68 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `mydgtech_tables_customers`
@@ -192,7 +200,15 @@ INSERT INTO `mydgtech_tables_customers` (`id`, `name`, `position`, `email`, `add
 (56, 'Ms Fifa', '', 'a.hafifah@yahoo.com', '', '+60 18 949 0819', 'Kyros Food Industries Sdn Bhd', '', '', '2023-05-19 16:57:19'),
 (57, 'Ms Zhiqing', '', 'zhiqing.xyb2b@gmail.com', '', '+60 17 369 8632', 'Tian Xing Cloud Supply Chain (Malaysia) Sdn Bhd', '', '', '2023-06-09 12:45:16'),
 (58, 'Euro-Circuit', '', '-', '', '+60', 'Euro-Circuit Technology Sdn Bhd', '', '', '2023-06-09 16:57:16'),
-(59, 'Ms Chai', '', '-', '', '+60 12 810 2526', 'Berjaya Sompo Insurance Berhad', '', '', '2023-06-13 15:45:49');
+(59, 'Ms Chai', '', '-', '', '+60 12 810 2526', 'Berjaya Sompo Insurance Berhad', '', '', '2023-06-13 15:45:49'),
+(60, 'Ms Anis', '', '-', '', '+60 17 675 4277', '', '', '', '2023-06-21 11:24:48'),
+(61, 'Ms Yvonne', '', 'justsuccess111@gmail.com', '', '+60 16 663 7899', 'Just Success Consortium Sdn Bhd', '', '', '2023-06-21 11:25:59'),
+(62, 'Mr Chloe', '', '-', '', '+60 16 285 0212', 'Hycopower', '', '', '2023-06-21 11:26:28'),
+(63, 'Ms Normas', '', 'normas@incief.org', '', '+60 10 246 5987', 'INCEIF University', '', '', '2023-06-21 11:28:28'),
+(64, 'Mr Adrian', '', 'adrian@zicom.my', '', '+60 12 668 6410', 'ZICOM TECHNOLOGIES', '', '', '2023-06-23 11:11:10'),
+(65, 'Mr Zaki', '', 'mk.mktgteam@gmail.com', '', '+60 11 6530 5005', 'Saujana Triangle Sdn Bhd', '', '', '2023-06-23 11:12:22'),
+(66, 'Ms Vernis', '', 'vernis@yw-group.biz', '', '+60 11 1077 9271', 'Wang Synergy Group Sdn Bhd', '', '', '2023-06-23 11:13:38'),
+(67, 'Ms Mei Hui', '', 'lowmh@sunten.com.my', '', '+60 12 627 8899', 'Sun Aten Pharmaceutical', '', '', '2023-06-23 11:15:12');
 
 -- --------------------------------------------------------
 
@@ -213,7 +229,7 @@ CREATE TABLE IF NOT EXISTS `mydgtech_tables_design` (
   `design_due` date NOT NULL,
   PRIMARY KEY (`design_id`),
   KEY `design_inquiry_id` (`design_inquiry_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `mydgtech_tables_design`
@@ -237,7 +253,10 @@ INSERT INTO `mydgtech_tables_design` (`design_id`, `design_inquiry_id`, `design_
 (17, '59', '[\"Brochure Design\"]', '-', '-', '[\"Text\", \"Image\"]', '*client asked an inquiry for company brochure via whatsapp on 23/04 and liaised with the client on 25/04\n*send the details to our PIC \n*they would like to have 11 pages of the brochure\n*we give the price RM80/per page but their budget only RM300 for the 11 pages \n*client not proceed because it exceed their budget', '932.80', '2023-04-25'),
 (18, '65', '[\"Poster Design\", \"Infographic Desgin\", \"Banner Design\"]', 'Elongated style', '-', '[\"Text\", \"Image\"]', '- client asked an inquiry via email and liaised via email and whatsapp \n- f/u on the updated (10/5); client provide all the details that we need \n- client mention to have an infographic poster, SIS Banner, landing page, long poster with additional 3-4 thumbnail image and there are 20 products\n- client want to have a quotation for their inquiry and we done share our graphic design portfolio', '0.00', '2023-05-12'),
 (19, '67', '[\"Logo Design\"]', 'not mentioned but send photos and seems like sente', 'not mentioned', '[\"Text\"]', '- Client asked an inquiry for logo design via WS\n- Client nature of business is food industries and they would like to have a logo that contain text ', '0.00', '2023-05-19'),
-(20, '68', '[\"Advertising design\", \"Poster Design\"]', 'not mention', 'not mention', '[\"Text\", \"Image\"]', '- client asked for graphic design services for long-term collaboration\n- client need packages for visual design such as poster, brand promotion visual\n- client quote for price of doing 20 designs (poster design, promotion visual and so on) for 3-4 designs in a month in AI Format', '0.00', '2023-06-09');
+(20, '68', '[\"Advertising design\", \"Poster Design\"]', 'not mention', 'not mention', '[\"Text\", \"Image\"]', '- client asked for graphic design services for long-term collaboration\n- client need packages for visual design such as poster, brand promotion visual\n- client quote for price of doing 20 designs (poster design, promotion visual and so on) for 3-4 designs in a month in AI Format', '0.00', '2023-06-09'),
+(21, '73', '[\"Advertising design\", \"Printing Material\", \"Banner Design\", \"Bunting Design\"]', 'Details in remarks', 'Convocation Day', '[\"Text\", \"Image\"]', '- client needs convo booklet (A4 size), guidebook (PDF), Invitation card for VIP, students and parents, backdrop design (physical and digital), content design, photo op, banner/bunting, instagram filters, EDM invite, 2 print ads. \n- client needs for printing too; convo booklet (250pcs), Invitation card VIP (50pcs) and Invitation card for students and parents (200pcs) with envelope', '33000.00', '2023-06-30'),
+(22, '75', '[\"Banner Design\", \"Bunting Design\"]', '1990H x 1540w', 'Property Expo', '[\"Text\", \"Image\"]', '- client asked for backdrop design via phone call and we liaised via WS\n- client mentioned it can be re-use on other property expo (might have to resize but still using same artwork)\n- additional info from the client:\n1. Artwork will combine 2 + 1 project in one design\n2. 2 from 3-storey semi-detached house project, 1 high-rise condo project.\n- the client will provide project logo, company logo, facade images project and colour guidelines. \n- We give the price to the client still in their budget', '1000.00', '2023-06-30'),
+(23, '77', '[\"Poster Design\", \"Packaging Design: labels, boxes, and bags\"]', 'To be discuss', 'Pharmaceutical Product', '[\"Text\", \"Image\"]', '- client would like to have 4 Poster design and 1 packaging box design \n- they will provide us their product photos.\n- to be discuss more on Tuesday (27.06.2023) \n', '2120.00', '2023-06-30');
 
 -- --------------------------------------------------------
 
@@ -257,7 +276,7 @@ CREATE TABLE IF NOT EXISTS `mydgtech_tables_inquiries` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `inquiry_id` (`inquiry_id`),
   KEY `customer_id` (`customer_id`,`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=70 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=78 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `mydgtech_tables_inquiries`
@@ -320,7 +339,15 @@ INSERT INTO `mydgtech_tables_inquiries` (`id`, `inquiry_id`, `customer_id`, `use
 (66, 'INQ20230515045238', 55, 9, 'rejected', '2023-05-15 00:00:00', '2023-05-19 16:52:38'),
 (67, 'INQ20230515050219', 56, 9, 'rejected', '2023-05-15 00:00:00', '2023-05-19 17:02:19'),
 (68, 'INQ20230609030647', 57, 9, 'rejected', '2023-06-09 00:00:00', '2023-06-09 15:06:47'),
-(69, 'INQ20230601051930', 58, 9, 'pending', '2023-06-01 00:00:00', '2023-06-09 17:19:30');
+(69, 'INQ20230601051930', 58, 9, 'pending', '2023-06-01 00:00:00', '2023-06-09 17:19:30'),
+(70, 'INQ20230612041449', 59, 9, 'pending', '2023-06-12 00:00:00', '2023-06-16 16:14:49'),
+(71, 'INQ20230617112252', 60, 9, 'pending', '2023-06-17 00:00:00', '2023-06-23 11:22:52'),
+(72, 'INQ20230620113321', 61, 9, 'pending', '2023-06-20 00:00:00', '2023-06-23 11:33:21'),
+(73, 'INQ20230621114156', 63, 9, 'pending', '2023-06-21 00:00:00', '2023-06-23 11:41:56'),
+(74, 'INQ20230622115324', 64, 9, 'pending', '2023-06-22 00:00:00', '2023-06-23 11:53:24'),
+(75, 'INQ20230622121338', 65, 9, 'pending', '2023-06-22 00:00:00', '2023-06-23 12:13:38'),
+(76, 'INQ20230622123919', 66, 9, 'pending', '2023-06-22 00:00:00', '2023-06-23 12:39:19'),
+(77, 'INQ20230622124433', 67, 9, 'pending', '2023-06-22 00:00:00', '2023-06-23 12:44:33');
 
 -- --------------------------------------------------------
 
@@ -341,7 +368,7 @@ CREATE TABLE IF NOT EXISTS `mydgtech_tables_production` (
   `production_due` date NOT NULL,
   PRIMARY KEY (`production_id`),
   KEY `production_inquiry_id` (`production_inquiry_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `mydgtech_tables_production`
@@ -375,7 +402,10 @@ INSERT INTO `mydgtech_tables_production` (`production_id`, `production_inquiry_i
 (29, '63', '[\"Video Production\"]', '[\"Corporate Video\"]', '2 minutes', 'Preferred Location', '- client asked an inquiry for video production via email and liaised via WS\n- client need 2 minutes video for corporate videos; the location will be at Shah Alam\n- the client would like to start as soon as possible and the project deadline also as soon as possible', '0.00', '2023-05-05'),
 (30, '64', '[\"Shooting Space\"]', '[]', '', '', '- client asked an inquiry for shooting space \n- client would like to come for a reccee the space\n- client would like to have a conference room and office room for shooting space', '0.00', '2023-05-08'),
 (31, '66', '[\"Shooting Space\"]', '[]', '', '', '- Client asked an inquiry for shooting space via WS\n- Client asked an inquiry for space level 31-5 \n- Send the photos to client \n- Ms Diyana mention after this shooting space Novux will handle ', '0.00', '2023-05-15'),
-(32, '69', '[\"Video Production\"]', '[\"Corporate Video\"]', '3 minutes', 'Preferred Location', '- client asked an inquiry for video shooting at different locations such as Airports, and ports\n- client asked inquiry for 3 days shooting \n- Mr Ali send the quotation to client ', '35500.00', '2023-06-09');
+(32, '69', '[\"Video Production\"]', '[\"Corporate Video\"]', '3 minutes', 'Preferred Location', '- client asked an inquiry for video shooting at different locations such as Airports, and ports\n- client asked inquiry for 3 days shooting \n- Mr Ali send the quotation to client ', '35500.00', '2023-06-09'),
+(33, '70', '[\"Video Production\"]', '[\"Corporate Video\"]', '4 - 6 minutes', 'Preferred Location', '- Video 1: with 2 talent - about 6 mins \n- Video 2: with 1 talent - about 4 mins\n- The speaker will speak in Malay\n- The video need an English subtitle\n', '10600.00', '2023-08-01'),
+(34, '72', '[\"Video Production\"]', '[\"Commercial Video\"]', '3 minutes', 'Preferred Location', '- Client would like to have web introduction video or User guide video\n- Client need to put the videos on CIDB Website. \n- We give the price RM7,200', '7200.00', '2023-06-30'),
+(35, '76', '[\"Video Production\"]', '[\"Event Video\"]', '2 - 4 minutes', 'Preferred Location', '- client would like to have a videographer services for grand opening event \n- The location will be at Sunway Pyramid and their target to start the shoot will be on August\n- The project deadline within a week after grand opening event and their budget is RM1,000. ', '1000.00', '2023-08-31');
 
 -- --------------------------------------------------------
 
@@ -395,7 +425,7 @@ CREATE TABLE IF NOT EXISTS `mydgtech_tables_website` (
   `website_due` date NOT NULL,
   PRIMARY KEY (`website_id`),
   KEY `website_inquiry_id` (`website_inquiry_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `mydgtech_tables_website`
@@ -412,7 +442,9 @@ INSERT INTO `mydgtech_tables_website` (`website_id`, `website_inquiry_id`, `webs
 (12, '51', '[\"Website Design\"]', 'Simple Website', 0, '*client asked an inquiry for web design via WS (client MR ALI)\n*client need a simple website and maximum 10 page\n*FMCG Company (Fast Moving Consumer Goods)', '6000.00', '2023-04-11'),
 (13, '52', '[\"Website Design\"]', 'Simple Website', 0, '*client asked an inquiry for web design via WS (client MR ALI)\n*client need a simple website and maximum 10 page\n*FMCG Company (Fast Moving Consumer Goods)', '6360.00', '2023-04-11'),
 (14, '53', '[\"Website Design\"]', 'Simple Website', 0, '*client asked an inquiry for a new portal \n*they provide a link for the portal they want to have\n*asked the client details for the further assists; not respond yet\n*f/u on the updated (13/04); no response\n*f/u on the updated (14/04); no response', '0.00', '2023-04-12'),
-(15, '57', '[\"Website Design\"]', 'Simple Website', 0, '*client asked an inquiry for web design and development via WS on 17/04\n*f/u on the updated (27/04); send the quotation to the client \n*f/u on the updated (28/04); client want to know more about photography services', '6360.00', '2023-04-28');
+(15, '57', '[\"Website Design\"]', 'Simple Website', 0, '*client asked an inquiry for web design and development via WS on 17/04\n*f/u on the updated (27/04); send the quotation to the client \n*f/u on the updated (28/04); client want to know more about photography services', '6360.00', '2023-04-28'),
+(16, '71', '[\"Website Design\"]', 'Simple Website', 0, '- client asked the rate for landing page and basic website via WS\n- client looking for small business F&B website\n- We share example of the F&B website and the price is not inclusive domain + hosting\n- The client ask for additional stock image and we give 10 complimentary stock image and if need more we will charge RM10 per image', '2000.00', '2023-06-30'),
+(17, '74', '[\"Website Design\"]', 'Simple Website', 0, '- client would like to redesign back their website like the example that they share with us.\n- client also need a content writing and some graphics design in their website\n- client budget is RM1,500 and we mentioned to them for this budget only can get one landing page and must use their own content and image and it is not included for the host and domain.\n- we share the new quotation price include with content writing and graphic design with total RM2,650 including the SST', '1500.00', '2023-06-30');
 
 -- --------------------------------------------------------
 
@@ -427,7 +459,7 @@ CREATE TABLE IF NOT EXISTS `novux_tables_comments` (
   `comments_comment` json NOT NULL,
   PRIMARY KEY (`comments_id`),
   KEY `inquiry_id` (`comments_inquiry_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=112 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=142 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `novux_tables_comments`
@@ -540,7 +572,38 @@ INSERT INTO `novux_tables_comments` (`comments_id`, `comments_inquiry_id`, `comm
 (108, 121, '[{\"id\": 0, \"date\": \"2023-06-08\", \"comment\": \"*received inquiry via email\"}, {\"id\": 1, \"date\": \"2023-06-08\", \"comment\": \"*sent brochure to the client via WS\"}, {\"id\": 2, \"date\": \"2023-06-13\", \"comment\": \"* f/u on the update\"}]'),
 (109, 122, '[{\"id\": 0, \"date\": \"2023-06-08\", \"comment\": \"*liaised with the client via WS\"}, {\"id\": 1, \"date\": \"2023-06-08\", \"comment\": \"*sent brochure to the client via WS\"}, {\"id\": 2, \"date\": \"2023-06-08\", \"comment\": \"*client came for walk-in\"}, {\"id\": 3, \"date\": \"2023-06-13\", \"comment\": \"* f/u on the update:\"}]'),
 (110, 123, '[{\"id\": 0, \"date\": \"2023-06-09\", \"comment\": \"*client provide their details via WS\"}, {\"id\": 1, \"date\": \"2023-06-09\", \"comment\": \"*sent quotation to the client\"}, {\"id\": 2, \"date\": \"2023-06-09\", \"comment\": \"*sent revised quotation to the client via email\"}, {\"id\": 3, \"date\": \"2023-06-09\", \"comment\": \"*issued invoice to the client\"}]'),
-(111, 124, '[{\"id\": 0, \"date\": \"2023-06-12\", \"comment\": \"*client provides their IC & SSM copy\"}, {\"id\": 1, \"date\": \"2023-06-12\", \"comment\": \"*issued invoice to the client\"}, {\"id\": 2, \"date\": \"2023-06-12\", \"comment\": \"*client made the payment\"}]');
+(111, 124, '[{\"id\": 0, \"date\": \"2023-06-12\", \"comment\": \"*client provides their IC & SSM copy\"}, {\"id\": 1, \"date\": \"2023-06-12\", \"comment\": \"*issued invoice to the client\"}, {\"id\": 2, \"date\": \"2023-06-12\", \"comment\": \"*client made the payment\"}]'),
+(112, 125, '[{\"id\": 0, \"date\": \"2023-06-13\", \"comment\": \"* sent brochure to the client via WS\"}]'),
+(113, 126, '[{\"id\": 0, \"date\": \"2023-06-13\", \"comment\": \"* client provide their details\"}, {\"id\": 1, \"date\": \"2023-06-13\", \"comment\": \"* sent quotation and brochure to the client via email\"}, {\"id\": 2, \"date\": \"2023-06-13\", \"comment\": \"* client will update soon\"}]'),
+(114, 127, '[{\"id\": 0, \"date\": \"2023-06-13\", \"comment\": \"* liaised with the client via phone call\"}, {\"id\": 1, \"date\": \"2023-06-13\", \"comment\": \"* client provides their details\"}, {\"id\": 2, \"date\": \"2023-06-13\", \"comment\": \"* sent photos to the client via WS\"}, {\"id\": 3, \"date\": \"2023-06-13\", \"comment\": \"* client will update soon\"}]'),
+(115, 128, '[{\"id\": 0, \"date\": \"2023-06-15\", \"comment\": \"* client interested to sign up M&A package\"}, {\"id\": 1, \"date\": \"2023-06-15\", \"comment\": \"* issued invoice to the client\"}, {\"id\": 2, \"date\": \"2023-06-15\", \"comment\": \"* client made the payment\"}]'),
+(116, 129, '[{\"id\": 0, \"date\": \"2023-06-15\", \"comment\": \"* liaised with the client via phone call\"}, {\"id\": 1, \"date\": \"2023-06-15\", \"comment\": \"* client provide their details\"}, {\"id\": 2, \"date\": \"2023-06-16\", \"comment\": \"* Mr Mehdi gave price RM 5.5k/full-day with computer set up and RM 5,900/Full-day with laptop set up\"}, {\"id\": 3, \"date\": \"2023-06-16\", \"comment\": \"* sent quotation to the client via WS\"}, {\"id\": 4, \"date\": \"2023-06-16\", \"comment\": \"* client will update soon\"}]'),
+(117, 130, '[{\"id\": 0, \"date\": \"2023-06-15\", \"comment\": \"* liaised with the client via phone call\"}, {\"id\": 1, \"date\": \"2023-06-15\", \"comment\": \"* client provide their details\"}, {\"id\": 2, \"date\": \"2023-06-15\", \"comment\": \"* sent photos to the client via WS\"}, {\"id\": 3, \"date\": \"2023-06-15\", \"comment\": \"* Mr Mehdi gave price RM 1.5k/Full-day and RM 1k/Half-day for suite 31-5\"}, {\"id\": 4, \"date\": \"2023-06-16\", \"comment\": \"* client provide new details\"}, {\"id\": 5, \"date\": \"2023-06-16\", \"comment\": \"* Mr Mehdi gave price RM 3k/Full-day and RM 2k/Full-day for whole unit 31-5\"}]'),
+(118, 131, '[{\"id\": 0, \"date\": \"2023-06-16\", \"comment\": \"* liaised with the client via WS\"}, {\"id\": 1, \"date\": \"2023-06-16\", \"comment\": \"* client provide their details\"}, {\"id\": 2, \"date\": \"2023-06-16\", \"comment\": \"* sent brochure to the client\"}, {\"id\": 3, \"date\": \"2023-06-16\", \"comment\": \"* client will update soon\"}]'),
+(119, 132, '[{\"id\": 0, \"date\": \"2023-06-16\", \"comment\": \"* received inquiry via email\"}, {\"id\": 1, \"date\": \"2023-06-16\", \"comment\": \"* liaised with the client via WS\"}, {\"id\": 2, \"date\": \"2023-06-16\", \"comment\": \"* sent quotation to the client via email\"}, {\"id\": 3, \"date\": \"2023-06-16\", \"comment\": \"* client will update soon\"}]'),
+(120, 133, '[{\"id\": 0, \"date\": \"2023-06-16\", \"comment\": \"* received inquiry via email\"}, {\"id\": 1, \"date\": \"2023-06-16\", \"comment\": \"* liaised with the client via WS\"}, {\"id\": 2, \"date\": \"2023-06-16\", \"comment\": \"* sent brochure to the client via WS\"}, {\"id\": 3, \"date\": \"2023-06-16\", \"comment\": \"* client will update soon\"}, {\"id\": 4, \"date\": \"2023-06-27\", \"comment\": \"* client interested to sign up M&A package\"}, {\"id\": 5, \"date\": \"2023-06-27\", \"comment\": \"* issued invoice to the client\"}, {\"id\": 6, \"date\": \"2023-06-27\", \"comment\": \"* client made the payment\"}]'),
+(121, 134, '[{\"id\": 0, \"date\": \"2023-06-16\", \"comment\": \"* liaised with the client via phone call\"}, {\"id\": 1, \"date\": \"2023-06-16\", \"comment\": \"* client provides their detail\"}, {\"id\": 2, \"date\": \"2023-06-16\", \"comment\": \"* sent quotation and brochure to the client via email\"}, {\"id\": 3, \"date\": \"2023-06-16\", \"comment\": \"* client will update soon\"}]'),
+(122, 135, '[{\"id\": 0, \"date\": \"2023-06-19\", \"comment\": \"*liaised with the client through WhatsApp\"}, {\"id\": 1, \"date\": \"2023-06-19\", \"comment\": \"*sent brochure to the client \"}, {\"id\": 2, \"date\": \"2023-06-19\", \"comment\": \"*client will update soon\"}]'),
+(123, 136, '[{\"id\": 0, \"date\": \"2023-06-19\", \"comment\": \"*liaised with the client via WS\"}, {\"id\": 1, \"date\": \"2023-06-19\", \"comment\": \"*client provide their details\"}, {\"id\": 2, \"date\": \"2023-06-19\", \"comment\": \"*sent brochure to the client via WS\"}, {\"id\": 3, \"date\": \"2023-06-23\", \"comment\": \"*sent quotation to the client via email\"}, {\"id\": 4, \"date\": \"2023-06-23\", \"comment\": \"*client came for a walk-in\"}, {\"id\": 5, \"date\": \"2023-06-30\", \"comment\": \"*client will update soon\"}]'),
+(124, 137, '[{\"id\": 0, \"date\": \"2023-06-19\", \"comment\": \"*sent brochure to the client via WS\"}, {\"id\": 1, \"date\": \"2023-06-19\", \"comment\": \"*client provide their IC & SSM copy\"}, {\"id\": 2, \"date\": \"2023-06-19\", \"comment\": \"*issued invoice to the client\"}, {\"id\": 3, \"date\": \"2023-06-19\", \"comment\": \"*client made the payment\"}]'),
+(125, 139, '[{\"id\": 0, \"date\": \"2023-06-19\", \"comment\": \"*client came for a walk-in\"}, {\"id\": 1, \"date\": \"2023-06-19\", \"comment\": \"*Mr Mehdi gave price RM 3k/month for Suite 4 and RM 3.5k/month for Suite 6\"}, {\"id\": 2, \"date\": \"2023-06-20\", \"comment\": \"*sent quotation to the client via WS\"}, {\"id\": 3, \"date\": \"2023-06-20\", \"comment\": \"*client will update soon\"}]'),
+(126, 140, '[{\"id\": 0, \"date\": \"2023-06-20\", \"comment\": \"*sent brochure to the client via WS\"}]'),
+(127, 141, '[{\"id\": 0, \"date\": \"2023-06-20\", \"comment\": \"*liaised with the client via WS\"}, {\"id\": 1, \"date\": \"2023-06-20\", \"comment\": \"*sent brochure to the client via WS\"}, {\"id\": 2, \"date\": \"2023-06-20\", \"comment\": \"*client will update soon\"}]'),
+(128, 142, '[{\"id\": 0, \"date\": \"2023-06-20\", \"comment\": \"*client provide their details\"}, {\"id\": 1, \"date\": \"2023-06-20\", \"comment\": \"*sent brochure to the client via WS\"}, {\"id\": 2, \"date\": \"2023-06-20\", \"comment\": \"*sent quotation to the client via email\"}, {\"id\": 3, \"date\": \"2023-06-20\", \"comment\": \"*client will update soon\"}]'),
+(129, 143, '[{\"id\": 0, \"date\": \"2023-06-20\", \"comment\": \"*client provide their details\"}, {\"id\": 1, \"date\": \"2023-06-20\", \"comment\": \"*Mr Mehdi gave pricing RM 2k/month for 2 PAX\"}, {\"id\": 2, \"date\": \"2023-06-20\", \"comment\": \"*sent quotation to the client via email\"}, {\"id\": 3, \"date\": \"2023-06-20\", \"comment\": \"*client will update soon\"}]'),
+(130, 144, '[{\"id\": 0, \"date\": \"2023-06-21\", \"comment\": \"*sent brochure to the client via WS\"}, {\"id\": 1, \"date\": \"2023-06-21\", \"comment\": \"*client provide their details\"}, {\"id\": 2, \"date\": \"2023-06-21\", \"comment\": \"*Mr Mehdi gave pricing RM 2k/month for 2 PAX\"}, {\"id\": 3, \"date\": \"2023-06-21\", \"comment\": \"*sent quotation to the client\"}, {\"id\": 4, \"date\": \"2023-06-22\", \"comment\": \"*sent another quotation to the client for 24 months\"}, {\"id\": 5, \"date\": \"2023-06-22\", \"comment\": \"*client will update soon\"}]'),
+(131, 145, '[{\"id\": 0, \"date\": \"2023-06-22\", \"comment\": \"*Mr Mehdi gave pricing RM 16k/1 year, RM 14k/2 years & RM 18k/6 months\"}, {\"id\": 1, \"date\": \"2023-06-22\", \"comment\": \"*sent quotation to the client via email\"}, {\"id\": 2, \"date\": \"2023-06-22\", \"comment\": \"*client will update soon\"}]'),
+(132, 146, '[{\"id\": 0, \"date\": \"2023-06-21\", \"comment\": \"*sent brochure to the client\"}, {\"id\": 1, \"date\": \"2023-06-21\", \"comment\": \"*client will update soon\"}]'),
+(133, 147, '[{\"id\": 0, \"date\": \"2023-06-21\", \"comment\": \"*sent brochure to the client via WS\"}, {\"id\": 1, \"date\": \"2023-06-21\", \"comment\": \"*client provide their details\"}, {\"id\": 2, \"date\": \"2023-06-21\", \"comment\": \"*sent quotation to the client via email\"}, {\"id\": 3, \"date\": \"2023-06-21\", \"comment\": \"*client will update soon\"}]'),
+(134, 148, '[{\"id\": 0, \"date\": \"2023-06-21\", \"comment\": \"*sent brochure to the client via WS\"}, {\"id\": 1, \"date\": \"2023-06-21\", \"comment\": \"*client will update soon\"}]'),
+(135, 149, '[{\"id\": 0, \"date\": \"2023-06-21\", \"comment\": \"*client provide their IC & SSM copy\"}, {\"id\": 1, \"date\": \"2023-06-21\", \"comment\": \"*issued invoice to the client\"}, {\"id\": 2, \"date\": \"2023-06-21\", \"comment\": \"*client made the payment\"}]');
+INSERT INTO `novux_tables_comments` (`comments_id`, `comments_inquiry_id`, `comments_comment`) VALUES
+(136, 150, '[{\"id\": 0, \"date\": \"2023-06-21\", \"comment\": \"*client provide their IC & SSM copy\"}, {\"id\": 1, \"date\": \"2023-06-21\", \"comment\": \"*issued invoice to the client\"}, {\"id\": 2, \"date\": \"2023-06-21\", \"comment\": \"*client made the payment\"}]'),
+(137, 151, '[{\"id\": 0, \"date\": \"2023-06-21\", \"comment\": \"*sent brochure to the client via WS\"}, {\"id\": 1, \"date\": \"2023-06-21\", \"comment\": \"*client will update soon\"}]'),
+(138, 152, '[{\"id\": 0, \"date\": \"2023-06-22\", \"comment\": \"*sent brochure to the client via WS\"}, {\"id\": 1, \"date\": \"2023-06-22\", \"comment\": \"*client will update soon\"}]'),
+(139, 153, '[{\"id\": 0, \"date\": \"2023-06-22\", \"comment\": \"*sent brochure to the client via WS\"}, {\"id\": 1, \"date\": \"2023-06-22\", \"comment\": \"*client provide their details\"}, {\"id\": 2, \"date\": \"2023-06-22\", \"comment\": \"*Mr Mehdi gave pricing\"}, {\"id\": 3, \"date\": \"2023-06-22\", \"comment\": \"*client will update soon\"}]'),
+(140, 154, '[{\"id\": 0, \"date\": \"2023-06-23\", \"comment\": \"*liaised with the client via phone call\"}, {\"id\": 1, \"date\": \"2023-06-23\", \"comment\": \"*sent brochure to the client via WS\"}, {\"id\": 2, \"date\": \"2023-06-26\", \"comment\": \"*client came for walk in\"}, {\"id\": 3, \"date\": \"2023-06-26\", \"comment\": \"*client interested to sign up M&A + DID package \"}, {\"id\": 4, \"date\": \"2023-06-26\", \"comment\": \"*issued invoice to the client\"}, {\"id\": 5, \"date\": \"2023-06-26\", \"comment\": \"*client made the payment\"}]'),
+(141, 155, '[{\"id\": 0, \"date\": \"2023-06-23\", \"comment\": \"*liaised with the client via email\"}, {\"id\": 1, \"date\": \"2023-06-23\", \"comment\": \"*client will come for a viewing\"}]');
 
 -- --------------------------------------------------------
 
@@ -561,7 +624,7 @@ CREATE TABLE IF NOT EXISTS `novux_tables_customers` (
   `size` varchar(50) DEFAULT NULL,
   `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=185 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=221 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `novux_tables_customers`
@@ -711,7 +774,42 @@ INSERT INTO `novux_tables_customers` (`id`, `name`, `position`, `email`, `addres
 (181, 'Mr Ridzuan', '', '-', '', '+60 12 245 6963', '', '', '', '2023-06-09 17:18:56'),
 (182, 'Mr Ganesh', '', '-', '', '+60 12 303 7524', '', '', '', '2023-06-09 17:21:41'),
 (183, 'Mr Badar', '', 'info@iaglob.com', '', '+968 9951 0015', 'International Academy', '', '', '2023-06-09 17:23:26'),
-(184, 'Mr Kong', '', 'office@codleadersb.com', '', '+60 11 3129 9526', 'COD Leaders Sdn Bhd', '', '', '2023-06-13 10:31:46');
+(184, 'Mr Kong', '', 'office@codleadersb.com', '', '+60 11 3129 9526', 'COD Leaders Sdn Bhd', '', '', '2023-06-13 10:31:46'),
+(185, 'Ms Bailey', '', '-', '', '+60 12 229 3682', '', '', '', '2023-06-16 14:08:51'),
+(186, 'Ms Lotte De Wijn', '', 'lottedewijn@gmail.com', '', '+31 6 34853223', 'ZoniQ', '', '', '2023-06-16 14:10:03'),
+(187, 'Ms Sarah', '', '-', '', '+60 18 272 1341', '', '', '', '2023-06-16 14:10:29'),
+(188, 'Mr Alex', '', '-', '', '+60 17 318 2890', 'Eagle Vision Resources', '', '', '2023-06-16 14:11:43'),
+(189, 'Mr Jordan', '', 'jordan@gpexcentral.org', '', '+60 12 669 6001', 'GPEX Central Sdn Bhd', '', '', '2023-06-16 14:12:57'),
+(190, 'Ms Kasmine', '', '-', '', '+60 16 293 6117', '', '', '', '2023-06-16 14:13:14'),
+(191, 'Ms Adriana', '', '-', '', '+60 11 3252 8998', '', '', '', '2023-06-16 14:13:39'),
+(192, 'Mr Xiang Hong', '', 'xianghong@briohr.com', '', '+60 19 253 9944', '', '', '', '2023-06-16 16:48:55'),
+(193, 'Ms Nuraleesya Ali', '', 'n.aleesya.ali@gmail.com', '', '+60 14 356 9478', '', '', '', '2023-06-16 16:49:55'),
+(194, 'Mr Kenrick', '', 'kenrick@capitalfront.biz', '', '+60 16 280 9383', 'Capital Front', '', '', '2023-06-16 17:37:08'),
+(195, 'Mr Syevesther', '', '-', '', '+60 16 842 5422', 'Syversoft Enterprise', '', '', '2023-06-20 14:03:35'),
+(196, 'Ms Shashi', '', 'shashivarmaan.thevaraj@yayasantar.org.my', '', '+60 11 3980 1664', 'Yayasan Tunku Abdul Rahman', '', '', '2023-06-20 14:04:11'),
+(197, 'Mr Wang', '', 'lumeoxmalaysia@gmail.com', '', '+60 16 206 6998', 'Lumeox Malaysia Sdn Bhd', '', '', '2023-06-20 14:04:48'),
+(198, 'Mr Jack', '', '-', '', '+60 18 981 0724', 'Cursemation Technology', '', '', '2023-06-20 14:05:29'),
+(200, 'Mr Chelvam', '', '-', '', '+60 12 296 0357', 'Kejavasto Synergy Resources', '', '', '2023-06-22 09:42:35'),
+(201, 'Ms Leena', '', '-', '', '+60 11 6086 3884', '', '', '', '2023-06-22 09:42:50'),
+(202, 'Ms Abi', '', 'nursakinah2420@gmail.com', '', '+60 13 654 5979', ' BeeZeeBee HUB LTD', '', '', '2023-06-22 09:43:25'),
+(203, 'Ms Jessy', '', 'jessyhoo91@gmail.com', '', '+60 11 3148 8969', '1STEP Pest Control Services Pte Ltd', '', '', '2023-06-22 09:44:16'),
+(204, 'Ms Yvonne Low', '', 'yvonne.low@metcore.com.sg', '', '+65 8522 7208', 'Metcore Sdn Bhd', '', '', '2023-06-22 09:44:51'),
+(205, 'Mr Pala', '', 'Palani@languagetalentsolutions.com', '', '+60 16 226 6441', 'HR Tag', '', '', '2023-06-22 09:45:19'),
+(206, 'Ms Rufaidah', '', '-', '', '+60 13 613 0104', '', '', '', '2023-06-22 09:45:42'),
+(207, 'Mr Pratul Chandra', '', 'pratul@trainingworld360.com', '', '+91 99973 67766', 'Trainingworld360', '', '', '2023-06-22 09:46:13'),
+(208, '-', '', 'nsk786@gmail.com', '', '+91 90085 31111', 'Global software technologies', '', '', '2023-06-22 09:46:47'),
+(209, 'Mr John', '', 'johnwong2728@gmail.com', '', '+60 14 950 2832', 'MAHA MERGER SDN BHD', '', '', '2023-06-22 09:47:36'),
+(210, 'Mr John', '', 'johnwong2728@gmail.com', '', '+60 14 950 2832', 'johnwong2728@gmail.com', '', '', '2023-06-22 09:48:26'),
+(211, 'Ms Chan', '', 'admin@digital4it.co', '', '+60 11 2633 0923', 'DIGITAL4IT SDN BHD', '', '', '2023-06-22 09:49:01'),
+(212, 'Mr Faris ', '', '-', '', '+60 10 849 8284', 'FCR Global Venture', '', '', '2023-06-23 09:37:37'),
+(213, 'Ms Syaza', '', 'syazayusof@garychongstudios.com', '', '+60 16 314 3407', 'Gary Chong Studios', '', '', '2023-06-23 09:38:18'),
+(214, 'Mr Sam', '', 'samarudinadvocates@gmail.com', '', '+60 16 800 2448', 'SAMARUDIN ADVOCATES & SOLICITORS', '', '', '2023-06-23 14:06:59'),
+(215, 'Mr Shamalen', '', 'shamalen-indra@amgeneralinsurance.com', '', '+60', 'AmGeneral Insurance Berhad ', '', '', '2023-06-23 16:35:41'),
+(216, 'Ms Peggy ', '', 'peggy_tan@obayashi.com.sg', '', '+65 9233 1699', 'Obayashi Singapore Private Ltd', '', '', '2023-06-28 13:40:47'),
+(217, 'Ms Farisha', '', '-', '', '+60 16 964 7012', '', '', '', '2023-06-28 13:41:26'),
+(218, 'Mr Victor ', '', 'victorlim@wisrdigital.com.my', '', '+60 17 354 1218', 'Wisr Digital Computing Sdn Bhd', '', '', '2023-06-28 13:43:30'),
+(219, 'Ms Lee', '', '-', '', '+60 16 249 5660', 'FilmForce Studio Sdn Bhd', '', '', '2023-06-28 13:45:58'),
+(220, 'Ms Jolyn', '', 'pcq@4asics.com', '', '+60 12 309 8476', '4Asics Technology Sdn Bhd', '', '', '2023-06-28 13:46:20');
 
 -- --------------------------------------------------------
 
@@ -732,7 +830,7 @@ CREATE TABLE IF NOT EXISTS `novux_tables_inquiries` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `inquiry_id` (`inquiry_id`),
   KEY `customer_id` (`customer_id`,`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=125 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=157 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `novux_tables_inquiries`
@@ -837,7 +935,7 @@ INSERT INTO `novux_tables_inquiries` (`id`, `inquiry_id`, `customer_id`, `user_i
 (112, '2818', 170, 8, 'Direct Call', 'pending', '2023-05-26 00:00:00', '2023-06-02 11:36:33'),
 (113, '2819', 171, 8, 'WhatsApp', 'pending', '2023-05-29 00:00:00', '2023-06-02 11:37:30'),
 (114, '2820', 175, 8, 'Email', 'pending', '2023-05-31 00:00:00', '2023-06-02 17:36:57'),
-(115, '2821', 176, 8, 'Direct Call', 'pending', '2023-06-01 00:00:00', '2023-06-02 17:38:07'),
+(115, '2821', 176, 8, 'Direct Call', 'rejected', '2023-06-01 00:00:00', '2023-06-02 17:38:07'),
 (116, '2822', 177, 8, 'WhatsApp', 'pending', '2023-06-02 00:00:00', '2023-06-02 17:38:41'),
 (117, '2823', 178, 8, 'WhatsApp', 'approved', '2023-06-02 00:00:00', '2023-06-02 17:38:58'),
 (118, '2824', 179, 8, 'Direct Call', 'pending', '2023-06-02 00:00:00', '2023-06-02 17:41:23'),
@@ -846,7 +944,38 @@ INSERT INTO `novux_tables_inquiries` (`id`, `inquiry_id`, `customer_id`, `user_i
 (121, '2827', 181, 8, '', 'pending', '2023-06-08 00:00:00', '2023-06-09 17:19:09'),
 (122, '2828', 182, 8, 'WhatsApp', 'pending', '2023-06-08 00:00:00', '2023-06-09 17:22:01'),
 (123, '2829', 183, 8, 'WhatsApp', 'approved', '2023-06-09 00:00:00', '2023-06-09 17:24:06'),
-(124, '2830', 184, 8, 'WhatsApp', 'approved', '2023-06-12 00:00:00', '2023-06-13 10:32:01');
+(124, '2830', 184, 8, 'WhatsApp', 'approved', '2023-06-12 00:00:00', '2023-06-13 10:32:01'),
+(125, '2831', 185, 8, '', 'pending', '2023-06-13 00:00:00', '2023-06-16 16:50:29'),
+(126, '2832', 186, 8, 'WhatsApp', 'pending', '2023-06-13 00:00:00', '2023-06-16 16:51:54'),
+(127, '2833', 187, 8, 'WhatsApp', 'pending', '2023-06-13 00:00:00', '2023-06-16 16:52:32'),
+(128, '2834', 188, 8, 'WhatsApp', 'approved', '2023-06-15 00:00:00', '2023-06-16 16:52:57'),
+(129, '2835', 189, 8, 'WhatsApp', 'pending', '2023-06-15 00:00:00', '2023-06-16 16:54:26'),
+(130, '2836', 190, 8, 'Direct Call', 'pending', '2023-06-15 00:00:00', '2023-06-16 16:54:56'),
+(131, '2837', 191, 8, 'WhatsApp', 'pending', '2023-06-16 00:00:00', '2023-06-16 16:58:25'),
+(132, '2838', 192, 8, 'Email', 'pending', '2023-06-16 00:00:00', '2023-06-16 16:58:53'),
+(133, '2839', 193, 8, 'Email', 'approved', '2023-06-16 00:00:00', '2023-06-16 16:59:03'),
+(134, '2840', 194, 8, 'Direct Call', 'pending', '2023-06-16 00:00:00', '2023-06-16 17:37:59'),
+(135, '2841', 195, 8, 'WhatsApp', 'pending', '2023-06-19 00:00:00', '2023-06-23 16:37:22'),
+(136, '2842', 196, 8, '', 'pending', '2023-06-19 00:00:00', '2023-06-23 16:39:32'),
+(137, '2843', 197, 8, 'WhatsApp', 'approved', '2023-06-19 00:00:00', '2023-06-23 16:42:47'),
+(139, '2844', 198, 8, 'Walk-in', 'pending', '2023-06-19 00:00:00', '2023-06-23 16:45:54'),
+(140, '2845', 200, 8, 'WhatsApp', 'pending', '2023-06-20 00:00:00', '2023-06-23 16:47:52'),
+(141, '2846', 201, 8, 'WhatsApp', 'pending', '2023-06-20 00:00:00', '2023-06-23 16:49:12'),
+(142, '2847', 202, 8, '', 'pending', '2023-06-23 00:00:00', '2023-06-23 16:53:19'),
+(143, '2848', 203, 8, 'WhatsApp', 'pending', '2023-06-20 00:00:00', '2023-06-23 17:08:20'),
+(144, '2849', 204, 8, '', 'pending', '2023-06-21 00:00:00', '2023-06-23 17:10:46'),
+(145, '2850', 205, 8, '', 'pending', '2023-06-21 00:00:00', '2023-06-23 17:12:39'),
+(146, '2851', 206, 8, 'WhatsApp', 'pending', '2023-06-21 00:00:00', '2023-06-23 17:14:43'),
+(147, '2852', 207, 8, 'WhatsApp', 'pending', '2023-06-21 00:00:00', '2023-06-23 17:16:20'),
+(148, '2853', 208, 8, '', 'pending', '2023-06-23 00:00:00', '2023-06-23 17:17:40'),
+(149, '2854', 210, 8, '', 'approved', '2023-06-21 00:00:00', '2023-06-23 17:18:25'),
+(150, '2855', 210, 8, 'WhatsApp', 'approved', '2023-06-21 00:00:00', '2023-06-23 17:18:47'),
+(151, '2856', 211, 8, 'WhatsApp', 'pending', '2023-06-21 00:00:00', '2023-06-23 17:22:38'),
+(152, '2857', 212, 8, '', 'pending', '2023-06-22 00:00:00', '2023-06-23 17:25:18'),
+(153, '2858', 213, 8, '', 'pending', '2023-06-22 00:00:00', '2023-06-23 17:26:13'),
+(154, '2859', 214, 8, '', 'approved', '2023-06-23 00:00:00', '2023-06-23 17:27:25'),
+(155, '2860', 215, 8, 'Email', 'pending', '2023-06-23 00:00:00', '2023-06-23 17:28:39'),
+(156, '2861', 216, 8, '', 'pending', '2023-06-28 00:00:00', '2023-06-28 17:38:35');
 
 -- --------------------------------------------------------
 
@@ -867,7 +996,7 @@ CREATE TABLE IF NOT EXISTS `novux_tables_meeting_shooting_room` (
   `meeting_remarks` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   PRIMARY KEY (`meeting_id`),
   UNIQUE KEY `inquiry_id` (`meeting_inquiry_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=75 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=90 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `novux_tables_meeting_shooting_room`
@@ -938,7 +1067,22 @@ INSERT INTO `novux_tables_meeting_shooting_room` (`meeting_id`, `meeting_inquiry
 (71, 115, 100, '2023-06-09', '2023-11-06', '09:00:00', '18:00:00', '[\"theater\"]', ''),
 (72, 118, 15, '2023-06-06', '2023-06-06', '08:00:00', '14:00:00', '[]', ''),
 (73, 119, 100, '2023-06-24', '2023-06-24', '14:00:00', '18:00:00', '[\"theater\"]', ''),
-(74, 123, 6, '2023-06-12', '2023-06-15', '09:00:00', '13:00:00', '[\"classroom\"]', '');
+(74, 123, 6, '2023-06-12', '2023-06-15', '09:00:00', '13:00:00', '[\"classroom\"]', ''),
+(75, 126, 12, '2023-08-07', '2023-08-11', '09:00:00', '18:00:00', '[\"u-shape\"]', ''),
+(76, 127, 0, '0000-00-00', '0000-00-00', '00:00:00', '00:00:00', '[\"Suite (31-1)\"]', 'Suite 31-5'),
+(77, 129, 30, '0000-00-00', '0000-00-00', '00:00:00', '00:00:00', '[\"classroom\"]', 'Exam rentall'),
+(78, 130, 5, '0000-00-00', '0000-00-00', '09:00:00', '18:00:00', '[\"Pantry\",\"Meeting room\",\"Reception Area\",\"CEO Room\"]', ''),
+(79, 131, 80, '2023-07-11', '2023-07-12', '09:00:00', '18:00:00', '[\"theater\"]', ''),
+(80, 132, 90, '2023-06-30', '2023-06-30', '09:00:00', '18:00:00', '[\"theater\"]', ''),
+(81, 134, 35, '0000-00-00', '0000-00-00', '09:00:00', '13:00:00', '[\"theater\"]', ''),
+(82, 136, 72, '2023-08-07', '2023-08-07', '09:00:00', '18:00:00', '[\"classroom\"]', ''),
+(83, 138, 30, '0000-00-00', '0000-00-00', '08:00:00', '15:00:00', '[\"classroom\"]', '*Exam center hall'),
+(84, 142, 20, '2023-07-12', '2023-07-13', '09:00:00', '18:00:00', '[\"classroom\"]', ''),
+(85, 145, 30, '0000-00-00', '0000-00-00', '00:00:00', '00:00:00', '[\"banquet\"]', ''),
+(86, 147, 4, '2023-07-24', '2023-07-28', '09:00:00', '18:00:00', '[\"classroom\"]', ''),
+(87, 151, 10, '0000-00-00', '0000-00-00', '00:00:00', '00:00:00', '[\"Boardroom\"]', ''),
+(88, 153, 0, '0000-00-00', '0000-00-00', '00:00:00', '00:00:00', '[]', 'Shooting'),
+(89, 155, 0, '0000-00-00', '0000-00-00', '00:00:00', '00:00:00', '[]', '');
 
 -- --------------------------------------------------------
 
@@ -957,7 +1101,7 @@ CREATE TABLE IF NOT EXISTS `novux_tables_serviced_office` (
   `serviced_remarks` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   PRIMARY KEY (`serviced_id`),
   UNIQUE KEY `inquiry_id` (`serviced_inquiry_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `novux_tables_serviced_office`
@@ -975,7 +1119,13 @@ INSERT INTO `novux_tables_serviced_office` (`serviced_id`, `serviced_inquiry_id`
 (21, 76, '0.00', 2, '0000-00-00 00:00:00', '', ''),
 (22, 98, '2000.00', 2, '0000-00-00 00:00:00', '', ''),
 (23, 103, '0.00', 6, '0000-00-00 00:00:00', '', 'for 6 months only'),
-(24, 116, '100.00', 4, '0000-00-00 00:00:00', '', '');
+(24, 116, '100.00', 4, '0000-00-00 00:00:00', '', ''),
+(25, 139, '0.00', 4, '0000-00-00 00:00:00', '', ''),
+(26, 143, '0.00', 2, '0000-00-00 00:00:00', '', ''),
+(27, 144, '0.00', -5, '0000-00-00 00:00:00', '', ''),
+(28, 146, '0.00', 0, '0000-00-00 00:00:00', '', ''),
+(29, 148, '0.00', 5, '0000-00-00 00:00:00', '', ''),
+(30, 156, '0.00', 5, '0000-00-00 00:00:00', '', '');
 
 -- --------------------------------------------------------
 
@@ -990,7 +1140,7 @@ CREATE TABLE IF NOT EXISTS `novux_tables_virtual_office` (
   `virtual_service` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   PRIMARY KEY (`virtual_id`),
   UNIQUE KEY `inquiry_id` (`virtual_inquiry_id`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=49 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=60 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `novux_tables_virtual_office`
@@ -1033,7 +1183,18 @@ INSERT INTO `novux_tables_virtual_office` (`virtual_id`, `virtual_inquiry_id`, `
 (45, 120, 'Mail & Address'),
 (46, 121, 'Mail & Address'),
 (47, 122, 'Mail & Address'),
-(48, 124, 'Mail & Address & DID');
+(48, 124, 'Mail & Address & DID'),
+(49, 125, 'Mail & Address'),
+(50, 128, 'Mail & Address'),
+(51, 133, 'Mail & Address'),
+(52, 135, 'Mail & Address'),
+(53, 137, 'Mail & Address'),
+(54, 140, 'Mail & Address'),
+(55, 141, 'Mail & Address'),
+(56, 149, 'Mail & Address & DID'),
+(57, 150, 'Mail & Address & DID'),
+(58, 152, 'Mail & Address'),
+(59, 154, 'Mail & Address');
 
 -- --------------------------------------------------------
 
